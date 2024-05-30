@@ -4,6 +4,7 @@ import 'package:western/widgets/itemsWidget2.dart';
 import 'package:western/widgets/itemsWidget3.dart';
 import 'package:western/widgets/itemsWidget4.dart';
 import 'package:western/widgets/itemsWidget5.dart';
+// import 'package:gradients/gradients.dart';
 
 class MenuPage extends StatelessWidget {
   const MenuPage({super.key});
@@ -16,7 +17,7 @@ class MenuPage extends StatelessWidget {
         body: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [Color.fromARGB(255, 67, 95, 126), Color.fromARGB(255, 74, 153, 149)], 
+              colors: [Color(0xFF4A90E2), Color(0xFF50C9C3)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
@@ -52,7 +53,7 @@ class MenuPage extends StatelessWidget {
                         ),
                         InkWell(
                           onTap: () {
-                            Navigator.pushNamed(context, "/cart");
+                            Navigator.pushNamed(context, "/order");
                           },
                           child: Icon(
                             Icons.shopping_cart_checkout_rounded,
@@ -63,7 +64,6 @@ class MenuPage extends StatelessWidget {
                       ],
                     ),
                   ),
-
                   SizedBox(height: 15),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15),
@@ -86,7 +86,6 @@ class MenuPage extends StatelessWidget {
                       ],
                     ),
                   ),
-
                   SizedBox(height: 4),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15),
@@ -109,7 +108,6 @@ class MenuPage extends StatelessWidget {
                       ],
                     ),
                   ),
-
                   SizedBox(height: 4),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15),
@@ -132,7 +130,6 @@ class MenuPage extends StatelessWidget {
                       ],
                     ),
                   ),
-
                   SizedBox(height: 8),
                   TabBar(
                     isScrollable: true,

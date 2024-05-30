@@ -6,11 +6,22 @@ class Notificationpage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final List<Map<String, String>> notifications = [
-      {'name': 'Oliva', 'description': 'Your order has been placed. Please be patient; the shop is preparing your order.'},
-      {'name': 'Jack', 'description': 'Your order is being processed. We will notify you when it is ready.'},
-      {'name': 'Rose', 'description': 'Your order is ready for pickup. Please collect it at your convenience.'},
+      {
+        'name': 'Oliva',
+        'description':
+            'Your order has been placed. Please be patient; the shop is preparing your order.'
+      },
+      {
+        'name': 'Jack',
+        'description':
+            'Your order is being processed. We will notify you when it is ready.'
+      },
+      {
+        'name': 'Rose',
+        'description':
+            'Your order is ready for pickup. Please collect it at your convenience.'
+      },
     ];
 
     return Scaffold(
@@ -28,7 +39,7 @@ class Notificationpage extends StatelessWidget {
         itemCount: notifications.length,
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.only(bottom: 8.0, left : 10, right : 10),
+            padding: const EdgeInsets.only(bottom: 8.0, left: 10, right: 10),
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
@@ -40,7 +51,8 @@ class Notificationpage extends StatelessWidget {
                   children: [
                     Text(
                       notifications[index]['name']!,
-                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: 4),
                     Text(
@@ -53,7 +65,8 @@ class Notificationpage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => NotiDetailPage(orderName: notifications[index]['name']!),
+                      builder: (context) => NotiDetailPage(
+                          orderName: notifications[index]['name']!),
                     ),
                   );
                 },
