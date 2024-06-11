@@ -41,9 +41,7 @@ class _MyAppState extends State<MyApp> {
         '/menu': (context) => MenuPage(),
         '/notification': (context) => Notificationpage(),
         "/order": (context) => OrderPage(),
-        "/payment": (context) => PaymentPage(
-              orderItems: [],
-            ),
+        "/payment": (context) => PaymentPage(orderItems: [],),
         "/trackOrder": (context) => TrackOrder(),
         "/account": (context) => ProfilePage(),
         "/signIn": (context) => SignInPage(), 

@@ -110,8 +110,8 @@ class _ItemsWidget2State extends State<ItemsWidget2> {
     "Item 5",
     "Item 6",
     "Item 7",
-    "\$1.48",
-    "\$1.66",
+    "\$1.00",
+    "\$1.00",
     "\$1.50",
     "Item 11"
   ];
@@ -196,7 +196,7 @@ class _ItemsWidget2State extends State<ItemsWidget2> {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 95, 112, 142),
+                            color:  Color.fromARGB(255, 106, 132, 173),
                             borderRadius: BorderRadius.circular(
                                 18), // Circular shape with radius 18
                             boxShadow: [

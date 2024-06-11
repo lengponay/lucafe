@@ -93,6 +93,9 @@ flutter:
     - lib/images/drinkItems/dt1.png
     - lib/images/drinkItems/dt2.png
     - lib/images/drinkItems/dt3.png
+    - lib/images/drinkItems/1a.png
+    - lib/images/drinkItems/2a.png
+    - lib/images/drinkItems/3a.png
     - lib/images/recommended/rc1.png
     - lib/images/recommended/rc2.png
     - lib/images/recommended/rc3.png

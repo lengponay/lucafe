@@ -210,7 +210,7 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 95, 112, 142),
+                          color:  Color.fromARGB(255, 106, 132, 173),
                           borderRadius: BorderRadius.circular(
                               18), // Circular shape with radius 18
                           boxShadow: [

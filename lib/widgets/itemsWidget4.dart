@@ -1,4 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -85,10 +84,14 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
     "88",
     "ee",
     "kk",
-    "Iced Green Tea",
-    "Passion Tea",
-    "Oolong Tea",
-    "Item 11",
+    "Iced Chocolate",
+    "Bubble Tea",
+    "Olong Milktea",
+    "Ovaltine",
+
+    "Bubble Tea",
+    "Olong Milktea",
+    "Ovaltine",
     "Item 12",
     "Item 13",
     "Item 14"
@@ -105,10 +108,10 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
     "ds 88",
     "ds ee",
     " ds kk",
-    "Refreshing green tea served over ice",
-    "A vibrant, tropical blend of hibiscus and fruit flavors",
-    "Smooth oolong tea topped with a creamy milk foam",
-    "Description 11",
+    "Refreshing choloate served over ice",
+    "Tea with bubble insid, fresh",
+    "Olong tea, make your day like tea",
+    "Ovaltine, boost your energy",
     "Description 12",
     "Description 13",
     "Description 14"
@@ -125,13 +128,13 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
     "88",
     "ee",
     "kk",
+    "tt",
+    "tt",
+    "rr",
+    "\$1.00",
     "\$1.50",
     "\$1.50",
-    "\$1.75",
-    "Item 11",
-    "Item 12",
-    "Item 13",
-    "Item 14"
+    "\$1.00"
   ];
 
   Widget build(BuildContext context) {
@@ -140,7 +143,7 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
       shrinkWrap: true,
       childAspectRatio: 0.70,
       children: [
-        for (int i = 10; i < 13; i++)
+        for (int i = 13; i < 17; i++)
           Container(
             padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
             margin: EdgeInsets.symmetric(vertical: 7, horizontal: 15),
@@ -210,7 +213,7 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 95, 112, 142),
+                          color:  Color.fromARGB(255, 106, 132, 173),
                           borderRadius: BorderRadius.circular(
                               18), // Circular shape with radius 18
                           boxShadow: [

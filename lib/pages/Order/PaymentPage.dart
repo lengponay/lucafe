@@ -15,16 +15,14 @@ class _PaymentPageState extends State<PaymentPage> {
   bool isCreditCardSelected = false;
 
   double calculateItemTotalPrice(int index) {
-    double price = double.parse(widget.orderItems[index]['price']
-        .substring(1)); // Remove the '$' sign and parse to double
+    double price = double.parse(widget.orderItems[index]['price'].substring(1)); 
     return price * widget.orderItems[index]['quantity'];
   }
 
   double calculateTotal() {
     double total = 0;
     for (var item in widget.orderItems) {
-      double price = double.parse(item['price']
-          .substring(1)); // Remove the '$' sign and parse to double
+      double price = double.parse(item['price'].substring(1));
       total += price * item['quantity'];
     }
     return total;
@@ -42,10 +40,10 @@ class _PaymentPageState extends State<PaymentPage> {
       ),
       child: Scaffold(
         backgroundColor:
-            Colors.transparent, // Set background color to transparent
+            Colors.transparent, 
         appBar: AppBar(
           backgroundColor:
-              Colors.transparent, // Set AppBar background to transparent
+              Colors.transparent, 
           elevation: 0,
           leading: IconButton(
             onPressed: () => Navigator.of(context).pop(),

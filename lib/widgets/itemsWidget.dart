@@ -91,13 +91,13 @@ class _ItemsWidgetState extends State<ItemsWidget> {
   ];
 
   final List<String> price = [
-    "\$1.60",
+    "\$1.50",
     "\$1.75",
     "\$1.25",
-    "\$2.0",
+    "\$2.00",
     "\$1.75",
     "\$1.75",
-    "\$2.5",
+    "\$2.50",
   ];
 
   String currentOption = options[0];
@@ -399,7 +399,7 @@ class _ItemsWidgetState extends State<ItemsWidget> {
                         margin : EdgeInsets.symmetric(vertical: 7),
                         decoration : BoxDecoration(
                           borderRadius : BorderRadius.circular(20),
-                          color: const Color.fromARGB(255, 95, 112, 142),
+                          color: Color.fromARGB(255, 106, 132, 173),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black.withOpacity(0.2), // Shadow color with opacity

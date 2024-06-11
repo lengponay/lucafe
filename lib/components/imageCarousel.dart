@@ -13,6 +13,9 @@ class _ImageCarouselState extends State<ImageCarousel> {
   int _currentPage = 0;
 
   final List<String> categories = [
+    'lib/images/drinkItems/1a.png',
+    'lib/images/drinkItems/2a.png',
+    'lib/images/drinkItems/3a.png',
     'lib/images/drinkItems/dt4.png',
     'lib/images/drinkItems/dt1.png',
     'lib/images/drinkItems/dt2.png',

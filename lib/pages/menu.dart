@@ -35,7 +35,7 @@ class MenuPage extends StatelessWidget {
                       children: [
                         InkWell(
                           onTap: () {
-                            Navigator.pushNamed(context, "/");
+                            Navigator.pushNamed(context, "/home");
                           },
                           child: Icon(
                             Icons.arrow_back_ios_new_rounded,
@@ -141,8 +141,8 @@ class MenuPage extends StatelessWidget {
                     ),
                     labelPadding: EdgeInsets.symmetric(horizontal: 20),
                     tabs: [
-                      Tab(text: "Iced Coffee"),
-                      Tab(text: "Hot Coffee"),
+                      Tab(text: "Cold-Coffee"),
+                      Tab(text: "Hot-Coffee"),
                       Tab(text: "Tea"),
                       Tab(text: "Milk Tea"),
                       Tab(text: "Soft Drinks"),
