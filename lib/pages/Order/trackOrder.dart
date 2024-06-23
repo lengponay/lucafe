@@ -167,7 +167,7 @@ class TrackOrder extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                         backgroundColor: Colors.white,
-                        foregroundColor: Colors.blueAccent,
+                        foregroundColor: const Color.fromARGB(255, 51, 102, 190),
                       ),
                       child: const Text('Confirm Pick Up'),
                     ),

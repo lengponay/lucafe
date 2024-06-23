@@ -21,6 +21,7 @@ class _HomePageState extends State<HomePage> {
 
   final Uri websiteUrl = Uri.parse('https://lifeun.edu.kh');
 
+  //website access
   Future<void> _launchURL() async {
     if (!await launch(websiteUrl.toString())) {
       throw 'Could not launch $websiteUrl';
@@ -30,7 +31,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    var defaultPadding = screenSize.width * 0.04;
+    var defaultPadding = screenSize.width * 0.03;
 
     return Container(
       decoration: BoxDecoration(
@@ -45,13 +46,13 @@ class _HomePageState extends State<HomePage> {
         body: CustomScrollView(
           slivers: <Widget>[
             SliverAppBar(
-              expandedHeight: screenSize.height * 0.15,
+              expandedHeight: screenSize.height * 0.12,
               elevation: 0.0,
               backgroundColor: Colors.transparent,
               flexibleSpace: Padding(
                 padding: EdgeInsets.only(
                     left: defaultPadding,
-                    top: screenSize.height * 0.08,
+                    top: screenSize.height * 0.06,
                     right: defaultPadding / 2,
                     bottom: defaultPadding / 2),
                 child: Column(

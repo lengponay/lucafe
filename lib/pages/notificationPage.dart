@@ -1,5 +1,9 @@
-import 'package:flutter/material.dart';
+// 
+
+// ignore_for_file: prefer_const_constructors, unused_local_variable, avoid_unnecessary_containers
+
 import 'package:western/pages/notificationDetailPage.dart';
+import 'package:flutter/material.dart';
 
 class Notificationpage extends StatelessWidget {
   const Notificationpage({Key? key}) : super(key: key);
@@ -8,22 +12,26 @@ class Notificationpage extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Map<String, String>> notifications = [
       {
-        'name': 'Oliva',
+        'name': 'MK', //Ronaldo
         'description':
             'Your order has been placed. Please be patient; the shop is preparing your order.'
       },
       {
-        'name': 'Jack',
+        'name': 'Olivia', //Michael
         'description':
             'Your order is being processed. We will notify you when it is ready.'
       },
       {
-        'name': 'Rose',
+        'name': 'Joe', //Jennie
         'description':
             'Your order is ready for pickup. Please collect it at your convenience.'
       },
     ];
-
+    final List<String> profile = [
+      'images/profile/ronaldo.png',
+      'images/profile/michael.png',
+      'images/profile/jennie.png'
+    ];
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -49,10 +57,19 @@ class Notificationpage extends StatelessWidget {
                 title: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      notifications[index]['name']!,
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    Row(
+                      children: [
+                        CircleAvatar(
+                            backgroundColor: Colors.grey.shade300,
+                            radius: 16,
+                            backgroundImage: AssetImage(profile[index])),
+                        SizedBox(width: 12),
+                        Text(
+                          notifications[index]['name']!,
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.bold),
+                        ),
+                      ],
                     ),
                     SizedBox(height: 4),
                     Text(

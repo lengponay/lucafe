@@ -11,8 +11,9 @@ class OrderPage extends StatefulWidget {
 
 class _OrderPageState extends State<OrderPage> {
   List<Map<String, dynamic>> orderItems = [
-    {"name": "Iced Americano", "price": "\$1.25", "image": "3", "quantity": 2},
-    {"name": "Olatte", "price": "\$1.25", "image": "18", "quantity": 2},
+    {"name": "Iced Americano", "price": "\$1.25", "image": "3", "quantity": 1},
+    {"name": "Coke", "price": "\$1.00", "image": "21", "quantity": 1},
+    {"name": "Olatte", "price": "\$0.65", "image": "18", "quantity": 1},
   ];
 
   void updateQuantity(int index, int newQuantity) {
@@ -46,7 +47,7 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;
-    final double appBarIconSize = screenSize.width * 0.09;
+    final double appBarIconSize = screenSize.width * 0.075;
     final double appBarTitleSize = screenSize.width * 0.06;
     //final double buttonPaddingVertical = screenSize.height * 0.02;
     //final double buttonPaddingHorizontal = screenSize.width * 0.05;
@@ -181,11 +182,11 @@ class _OrderPageState extends State<OrderPage> {
                                 borderRadius: BorderRadius.circular(20.0),
                                 borderSide: BorderSide.none,
                               ),
-                              hintText: "Enter Coupon Code Here:)",
+                              hintText: "Enter your coupon",
                               hintStyle: TextStyle(
                                 color: Color.fromARGB(255, 87, 82, 82),
                               ),
-                              fillColor: Color.fromARGB(255, 215, 211, 211),
+                              fillColor: Colors.grey[150],
                               filled: true,
                               suffixIcon: Padding(
                                 padding: const EdgeInsets.only(
@@ -232,7 +233,7 @@ class _OrderPageState extends State<OrderPage> {
                               children: [
                                 ElevatedButton(
                                   onPressed: () {
-                                    // Add your coupon code logic here
+                                   //action pel click ler coupon tv
                                   },
                                   style: ElevatedButton.styleFrom(
                                     padding: EdgeInsets.symmetric(
@@ -241,7 +242,7 @@ class _OrderPageState extends State<OrderPage> {
                                       borderRadius: BorderRadius.circular(30),
                                     ),
                                     backgroundColor:
-                                        Color.fromARGB(171, 82, 147, 146),
+                                        Color.fromARGB(171, 59, 174, 228),
                                     foregroundColor:
                                         Color.fromARGB(255, 232, 241, 244),
                                   ),
@@ -269,7 +270,7 @@ class _OrderPageState extends State<OrderPage> {
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black12,
+                        color: const Color.fromARGB(31, 232, 225, 225),
                         blurRadius: 10,
                         spreadRadius: 1,
                       ),
@@ -380,7 +381,7 @@ class _OrderPageState extends State<OrderPage> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(left: 5, top: 30),
+                  padding: EdgeInsets.only(left : 230, top: 10),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
                     boxShadow: [
@@ -394,7 +395,7 @@ class _OrderPageState extends State<OrderPage> {
                     ],
                   ),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       ElevatedButton(
                         onPressed: () {
@@ -408,7 +409,7 @@ class _OrderPageState extends State<OrderPage> {
                         },
                         style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.symmetric(
-                              vertical: 15, horizontal: 20), // Adjust padding
+                              vertical: 10, horizontal: 20 ), // Adjust padding
                           textStyle: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -419,6 +420,7 @@ class _OrderPageState extends State<OrderPage> {
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
+                            color : const Color.fromARGB(255, 49, 101, 190),
                           ),
                         ),
                       ),

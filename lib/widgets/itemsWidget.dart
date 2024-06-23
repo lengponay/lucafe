@@ -356,7 +356,7 @@ class _ItemsWidgetState extends State<ItemsWidget> {
                   child: Container(
                     margin: EdgeInsets.all(10),
                     child: Image.asset(
-                      "lib/images/${i + 1}.png",
+                      "lib/images/drinks/${i + 1}.png",
                       width: 130,
                       height: 130,
                       fit: BoxFit.contain, //// contain => kom oy dach pic

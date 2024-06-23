@@ -367,7 +367,7 @@ class _PaymentPageState extends State<PaymentPage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 210),
+                        padding: const EdgeInsets.only(left: 220),
                         child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
@@ -390,6 +390,7 @@ class _PaymentPageState extends State<PaymentPage> {
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
+                              color : const Color.fromARGB(255, 51, 102, 190),
                             ),
                           ),
                         ),

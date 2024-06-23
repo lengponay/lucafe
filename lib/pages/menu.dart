@@ -123,7 +123,7 @@ class MenuPage extends StatelessWidget {
                           "9.5    100+ ratings",
                           style: TextStyle(
                             fontSize: 15,
-                            color: Color.fromARGB(255, 102, 52, 52),
+                            color: Color.fromARGB(255, 29, 15, 15),
                             fontWeight: FontWeight.w500,
                           ),
                         ),

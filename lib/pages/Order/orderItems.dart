@@ -53,7 +53,7 @@ class _OrderItemsState extends State<OrderItems> {
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
-            color: Color.fromARGB(255, 100, 182, 181),
+            color: Color.fromARGB(255, 103, 186, 230),
             spreadRadius: 1,
             blurRadius: 1,
             offset: Offset(0, 3),
@@ -75,7 +75,7 @@ class _OrderItemsState extends State<OrderItems> {
           ],
         ),
         child: Card(
-          color: Color.fromARGB(176, 212, 204, 204),
+          color: Color.fromARGB(173, 238, 231, 231),
           elevation: 0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
@@ -95,14 +95,14 @@ class _OrderItemsState extends State<OrderItems> {
                     color: Colors.black12,
                     boxShadow: [
                       BoxShadow(
-                        color: Color.fromARGB(255, 62, 135, 149).withOpacity(0.1),
+                        color: Color.fromARGB(255, 56, 168, 205).withOpacity(0.1),
                         spreadRadius: 1,
                         blurRadius: 10,
                       ),
                     ],
                   ),
                   child: Image.asset(
-                    "lib/images/${widget.image}.png",
+                    "lib/images/drinks/${widget.image}.png",
                     width: 110,
                     height: 100,
                   ),
@@ -140,16 +140,16 @@ class _OrderItemsState extends State<OrderItems> {
                               _buildIconButton(
                                 icon: Icons.remove_circle_outline,
                                 onPressed: _decrementQuantity,
-                                color: Colors.red,
+                                color: Color.fromARGB(255, 220, 87, 77),
                               ),
                               Container(
                                 width: 35,
                                 height: 30,
                                 decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 120, 132, 159),
+                                  color: Color.fromARGB(255, 70, 165, 194),
                                   border: Border.all(
                                     color:
-                                        Color.fromARGB(255, 163, 136, 136),
+                                        Color.fromARGB(255, 206, 181, 181),
                                     width: 2,
                                   ),
                                   borderRadius: BorderRadius.circular(5),

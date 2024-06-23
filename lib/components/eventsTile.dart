@@ -65,7 +65,8 @@ class _EventsTileState extends State<EventsTile> with AutomaticKeepAliveClientMi
             },
             itemBuilder: (context, index) => Center(
               child: Container(
-                width: MediaQuery.of(context).size.width * 0.7,
+                width: MediaQuery.of(context).size.width * 1.2,
+                //height: MediaQuery.of(context).size.height * 1.5,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   image: DecorationImage(

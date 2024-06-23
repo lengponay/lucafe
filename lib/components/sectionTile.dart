@@ -9,7 +9,7 @@ class SectionTile extends StatefulWidget {
 }
 
 class _SectionTileState extends State<SectionTile> with AutomaticKeepAliveClientMixin {
-  double defaultPadding = 15.0;
+  double defaultPadding = 10.0;
   int _currentPage = 0;
   late PageController _pageController;
 
@@ -64,7 +64,7 @@ class _SectionTileState extends State<SectionTile> with AutomaticKeepAliveClient
               child: Container(
                 width: MediaQuery.of(context).size.width * 0.7,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(25),
                   image: DecorationImage(
                     image: AssetImage(recommended[index]),
                     fit: BoxFit.contain,
