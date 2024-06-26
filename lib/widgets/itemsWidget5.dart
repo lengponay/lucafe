@@ -2,6 +2,7 @@
 
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 // import 'package:western/widgets/navBar.dart';
 
 class ItemsWidget5 extends StatefulWidget {
@@ -47,7 +48,7 @@ class _ItemsWidget5State extends State<ItemsWidget5> {
         title: Text(
           "Sucessfully added to cart",
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: GoogleFonts.assistant(
             fontSize: 18,
             color: Colors.white,
           ),
@@ -62,7 +63,7 @@ class _ItemsWidget5State extends State<ItemsWidget5> {
               },
               child: Text(
                 "OK",
-                style: TextStyle(
+                style: GoogleFonts.assistant(
                   color: Colors.white,
                 ),
               ))
@@ -119,7 +120,7 @@ class _ItemsWidget5State extends State<ItemsWidget5> {
     "17",
     "Special Olatte",
     "Sprite, boost your mood",
-    "With Pepsi, everything is yummy",
+    "With Pepsi, everything is yummy with Pepsi.",
     "Coke, Make your food more delicious",
     "22",
   ];
@@ -197,7 +198,7 @@ class _ItemsWidget5State extends State<ItemsWidget5> {
                       alignment: Alignment.centerLeft,
                       child: Text(
                         itemNames[i],
-                        style: TextStyle(
+                        style: GoogleFonts.assistant(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
@@ -209,9 +210,9 @@ class _ItemsWidget5State extends State<ItemsWidget5> {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       description[i],
-                      style: TextStyle(
+                      style: GoogleFonts.assistant(
                         fontSize: 12,
-                        fontWeight: FontWeight.w200,
+                        fontWeight: FontWeight.w300,
                         color: Colors.white,
                       ),
                     ),
@@ -226,7 +227,7 @@ class _ItemsWidget5State extends State<ItemsWidget5> {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                            color:  Color.fromARGB(255, 106, 132, 173),
+                            color:  Color.fromARGB(145, 67, 104, 166),
                             borderRadius: BorderRadius.circular(
                                 18), // Circular shape with radius 18
                             boxShadow: [
@@ -246,7 +247,7 @@ class _ItemsWidget5State extends State<ItemsWidget5> {
                             padding: EdgeInsets.only(top: 5, bottom: 2),
                             child: Text(
                               price[i],
-                              style: TextStyle(
+                              style: GoogleFonts.assistant(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.white,
@@ -258,12 +259,13 @@ class _ItemsWidget5State extends State<ItemsWidget5> {
                         IconButton(
                           onPressed: () {
                             /// bottom sheet pop up
-                            customShowBottomSheet(context, i);
+                            // customShowBottomSheet(context, i);
+                            Navigator.pushNamed(context, '/order');
                           },
                           icon: const Icon(Icons.add),
                           style: IconButton.styleFrom(
                               backgroundColor:
-                                  Color.fromARGB(255, 195, 244, 228)),
+                                  Color.fromARGB(255, 171, 199, 237)),
                         ),
                       ],
                     ),
@@ -276,128 +278,128 @@ class _ItemsWidget5State extends State<ItemsWidget5> {
     );
   }
 
-  PersistentBottomSheetController customShowBottomSheet(
-      BuildContext context, int i) {
-    return showBottomSheet(
-        context: context,
-        // barrierColor: Colors.black26.withOpacity(0.8),
-        builder: (BuildContext context) {
-          return Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            height: 550,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  height: 25,
-                ),
+  // PersistentBottomSheetController customShowBottomSheet(
+  //     BuildContext context, int i) {
+  //   return showBottomSheet(
+  //       context: context,
+  //       // barrierColor: Colors.black26.withOpacity(0.8),
+  //       builder: (BuildContext context) {
+  //         return Container(
+  //           padding: EdgeInsets.symmetric(horizontal: 20),
+  //           height: 550,
+  //           child: Column(
+  //             mainAxisAlignment: MainAxisAlignment.start,
+  //             crossAxisAlignment: CrossAxisAlignment.start,
+  //             children: [
+  //               SizedBox(
+  //                 height: 25,
+  //               ),
 
-                /// coffee name in sheet bar
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      itemNames[i],
-                      style: TextStyle(
-                        fontSize: 26,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    IconButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        icon: Icon(Icons.close)),
-                  ],
-                ),
+  //               /// coffee name in sheet bar
+  //               Row(
+  //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  //                 children: [
+  //                   Text(
+  //                     itemNames[i],
+  //                     style: GoogleFonts.assistant(
+  //                       fontSize: 26,
+  //                       fontWeight: FontWeight.bold,
+  //                     ),
+  //                   ),
+  //                   IconButton(
+  //                       onPressed: () {
+  //                         Navigator.pop(context);
+  //                       },
+  //                       icon: Icon(Icons.close)),
+  //                 ],
+  //               ),
 
-                SizedBox(
-                  height: 30,
-                ),
+  //               SizedBox(
+  //                 height: 30,
+  //               ),
 
-                //// we add radio here
-                //// but drink no need sugar
+  //               //// we add radio here
+  //               //// but drink no need sugar
 
-                SizedBox(
-                  height: 20,
-                ),
+  //               SizedBox(
+  //                 height: 20,
+  //               ),
 
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    /// show price in bottom sheet
-                    Text(
-                      price[i],
-                      style: TextStyle(
-                        color: Colors.red,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+  //               Row(
+  //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  //                 children: [
+  //                   /// show price in bottom sheet
+  //                   Text(
+  //                     price[i],
+  //                     style: GoogleFonts.assistant(
+  //                       color: Colors.red,
+  //                       fontSize: 20,
+  //                       fontWeight: FontWeight.bold,
+  //                     ),
+  //                   ),
 
-                    SizedBox(
-                      child: Row(
-                        children: [
-                          /// remove icon butoon
-                          IconButton(
-                            onPressed: decrementQuantity,
-                            icon: Icon(
-                              Icons.remove_circle_outline_outlined,
-                              color: const Color.fromARGB(255, 120, 116, 116),
-                              size: 30,
-                            ),
-                          ),
+  //                   SizedBox(
+  //                     child: Row(
+  //                       children: [
+  //                         /// remove icon butoon
+  //                         IconButton(
+  //                           onPressed: decrementQuantity,
+  //                           icon: Icon(
+  //                             Icons.remove_circle_outline_outlined,
+  //                             color: const Color.fromARGB(255, 120, 116, 116),
+  //                             size: 30,
+  //                           ),
+  //                         ),
 
-                          SizedBox(
-                            width: 40,
-                            child: Center(
-                              child: Text(
-                                quantityCount.toString(),
-                                style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.w400),
-                              ),
-                            ),
-                          ),
+  //                         SizedBox(
+  //                           width: 40,
+  //                           child: Center(
+  //                             child: Text(
+  //                               quantityCount.toString(),
+  //                               style: GoogleFonts.assistant(
+  //                                   fontSize: 16, fontWeight: FontWeight.w400),
+  //                             ),
+  //                           ),
+  //                         ),
 
-                          // add icon button
-                          IconButton(
-                            onPressed: incrementQuantity,
-                            icon: Icon(
-                              Icons.add_circle,
-                              size: 30,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 50,
-                ),
-                Center(
-                  child: ElevatedButton(
-                    onPressed: addToCart,
-                    style: ElevatedButton.styleFrom(
-                      // primary: Colors.green,
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 80, vertical: 20),
-                      backgroundColor: Colors.green,
-                    ),
-                    child: Text(
-                      "Add to Cart",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          );
-        });
+  //                         // add icon button
+  //                         IconButton(
+  //                           onPressed: incrementQuantity,
+  //                           icon: Icon(
+  //                             Icons.add_circle,
+  //                             size: 30,
+  //                           ),
+  //                         ),
+  //                       ],
+  //                     ),
+  //                   ),
+  //                 ],
+  //               ),
+  //               SizedBox(
+  //                 height: 50,
+  //               ),
+  //               Center(
+  //                 child: ElevatedButton(
+  //                   onPressed: addToCart,
+  //                   style: ElevatedButton.styleFrom(
+  //                     // primary: Colors.green,
+  //                     padding:
+  //                         EdgeInsets.symmetric(horizontal: 80, vertical: 20),
+  //                     backgroundColor: Colors.green,
+  //                   ),
+  //                   child: Text(
+  //                     "Add to Cart",
+  //                     style: GoogleFonts.assistant(
+  //                       fontSize: 20,
+  //                       color: Colors.white,
+  //                       fontWeight: FontWeight.w600,
+  //                     ),
+  //                   ),
+  //                 ),
+  //               ),
+  //             ],
+  //           ),
+  //         );
+  //       });
   }
-}
+// }

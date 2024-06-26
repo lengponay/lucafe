@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TrackOrder extends StatelessWidget {
   const TrackOrder({super.key});
@@ -8,7 +9,7 @@ class TrackOrder extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [Color(0xFF4A90E2), Color(0xFF50C9C3)], 
+          colors: [Color.fromARGB(255, 74, 140, 215), Color.fromARGB(255, 217, 222, 222)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -35,7 +36,7 @@ class TrackOrder extends StatelessWidget {
               const SizedBox(height: 2),
               const Center(
                 child: Text(
-                  'Order Number: #12345',
+                  'Order Number: #168168',
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,

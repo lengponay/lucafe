@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class OrderItems extends StatefulWidget {
   final String name;
@@ -75,7 +76,7 @@ class _OrderItemsState extends State<OrderItems> {
           ],
         ),
         child: Card(
-          color: Color.fromARGB(173, 238, 231, 231),
+          color: Color.fromARGB(193, 235, 237, 240),
           elevation: 0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
@@ -95,7 +96,8 @@ class _OrderItemsState extends State<OrderItems> {
                     color: Colors.black12,
                     boxShadow: [
                       BoxShadow(
-                        color: Color.fromARGB(255, 56, 168, 205).withOpacity(0.1),
+                        color:
+                            Color.fromARGB(255, 161, 169, 171).withOpacity(0.1),
                         spreadRadius: 1,
                         blurRadius: 10,
                       ),
@@ -116,7 +118,7 @@ class _OrderItemsState extends State<OrderItems> {
                       children: [
                         Text(
                           widget.name,
-                          style: TextStyle(
+                          style: GoogleFonts.assistant(
                             fontSize: 17,
                             fontWeight: FontWeight.bold,
                             color: const Color.fromARGB(255, 53, 51, 51),
@@ -133,7 +135,7 @@ class _OrderItemsState extends State<OrderItems> {
                         ),
                         SizedBox(height: 5),
                         Padding(
-                          padding : EdgeInsets.only(left : 100),
+                          padding: EdgeInsets.only(left: 100),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
@@ -146,10 +148,9 @@ class _OrderItemsState extends State<OrderItems> {
                                 width: 35,
                                 height: 30,
                                 decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 70, 165, 194),
+                                  color: Color.fromARGB(190, 124, 190, 236),
                                   border: Border.all(
-                                    color:
-                                        Color.fromARGB(255, 206, 181, 181),
+                                    color: Color.fromARGB(255, 142, 160, 193),
                                     width: 2,
                                   ),
                                   borderRadius: BorderRadius.circular(5),
@@ -159,8 +160,8 @@ class _OrderItemsState extends State<OrderItems> {
                                     '$_quantity',
                                     style: TextStyle(
                                       fontSize: 18,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w300,
+                                      color: Color.fromARGB(255, 49, 50, 51),
+                                      fontWeight: FontWeight.w400,
                                     ),
                                   ),
                                 ),
@@ -177,16 +178,11 @@ class _OrderItemsState extends State<OrderItems> {
                     ),
                   ),
                 ),
-                
               ],
             ),
-            
           ),
-          
         ),
-        
       ),
-      
     );
   }
 

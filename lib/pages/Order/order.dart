@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:western/pages/Order/PaymentPage.dart';
-import 'orderItems.dart'; 
+import 'orderItems.dart';
 
 class OrderPage extends StatefulWidget {
   const OrderPage({Key? key});
@@ -30,7 +31,7 @@ class _OrderPageState extends State<OrderPage> {
 
   //item amount
   double calculateItemTotalPrice(int index) {
-    double price = double.parse(orderItems[index]['price'].substring(1)); 
+    double price = double.parse(orderItems[index]['price'].substring(1));
     return price * orderItems[index]['quantity'];
   }
 
@@ -38,7 +39,7 @@ class _OrderPageState extends State<OrderPage> {
   double calculateTotal() {
     double total = 0;
     for (var item in orderItems) {
-      double price = double.parse(item['price'].substring(1)); 
+      double price = double.parse(item['price'].substring(1));
       total += price * item['quantity'];
     }
     return total;
@@ -58,7 +59,10 @@ class _OrderPageState extends State<OrderPage> {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [Color(0xFF4A90E2), Color(0xFF50C9C3)],
+          colors: [
+            Color.fromARGB(255, 74, 140, 215),
+            Color.fromARGB(255, 217, 222, 222)
+          ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -71,7 +75,7 @@ class _OrderPageState extends State<OrderPage> {
           leading: IconButton(
             onPressed: () => Navigator.of(context).pop(),
             icon: Icon(
-              Icons.arrow_back_rounded,
+              Icons.arrow_back_ios,
               color: Colors.white,
             ),
             iconSize: appBarIconSize,
@@ -79,7 +83,7 @@ class _OrderPageState extends State<OrderPage> {
           title: Center(
             child: Text(
               "Order Summary",
-              style: TextStyle(
+              style: GoogleFonts.assistant(
                 color: Colors.white,
                 fontSize: appBarTitleSize,
                 fontWeight: FontWeight.w700,
@@ -98,7 +102,9 @@ class _OrderPageState extends State<OrderPage> {
             ),
           ],
         ),
-        body: SingleChildScrollView(
+        body: Padding(
+          padding : EdgeInsets.only(bottom : 20.0),
+        child : SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.symmetric(
               vertical: screenSize.height * 0.005,
@@ -108,7 +114,8 @@ class _OrderPageState extends State<OrderPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: screenSize.height * 0.01),
+                  margin:
+                      EdgeInsets.symmetric(vertical: screenSize.height * 0.01),
                   child: Divider(
                     color: Colors.white,
                     thickness: 2,
@@ -127,7 +134,7 @@ class _OrderPageState extends State<OrderPage> {
                   padding: EdgeInsets.only(left: screenSize.width * 0.01),
                   child: Text(
                     "Your order summary",
-                    style: TextStyle(
+                    style: GoogleFonts.assistant(
                       fontSize: fontSizeMedium,
                       color: Colors.white,
                       fontWeight: FontWeight.w400,
@@ -149,7 +156,6 @@ class _OrderPageState extends State<OrderPage> {
                       onDelete: () => deleteItem(i),
                     ),
                   ),
-                
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -182,8 +188,8 @@ class _OrderPageState extends State<OrderPage> {
                                 borderRadius: BorderRadius.circular(20.0),
                                 borderSide: BorderSide.none,
                               ),
-                              hintText: "Enter your coupon",
-                              hintStyle: TextStyle(
+                              hintText: "Remark your words here. e.g : sugar 70%",
+                              hintStyle: GoogleFonts.assistant(
                                 color: Color.fromARGB(255, 87, 82, 82),
                               ),
                               fillColor: Colors.grey[150],
@@ -191,10 +197,10 @@ class _OrderPageState extends State<OrderPage> {
                               suffixIcon: Padding(
                                 padding: const EdgeInsets.only(
                                     left: 10.0, right: 10.0),
-                                child: Icon(
-                                  Icons.local_offer,
-                                  color: Colors.redAccent,
-                                ),
+                                // child: Icon(
+                                //   Icons.local_offer,
+                                //   color: Colors.redAccent,
+                                // ),
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(30.0),
@@ -205,7 +211,7 @@ class _OrderPageState extends State<OrderPage> {
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(30.0),
                                 borderSide: BorderSide(
-                                  color: Colors.blueAccent,
+                                  color: Color.fromARGB(255, 141, 184, 214),
                                 ),
                               ),
                               errorBorder: OutlineInputBorder(
@@ -221,42 +227,42 @@ class _OrderPageState extends State<OrderPage> {
                                 ),
                               ),
                             ),
-                            style: TextStyle(
+                            style: GoogleFonts.assistant(
                               fontSize: 16,
                               color: Colors.black,
                             ),
                           ),
                           SizedBox(height: 5),
-                          Container(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                ElevatedButton(
-                                  onPressed: () {
-                                   //action pel click ler coupon tv
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                    padding: EdgeInsets.symmetric(
-                                        vertical: 5, horizontal: 10),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(30),
-                                    ),
-                                    backgroundColor:
-                                        Color.fromARGB(171, 59, 174, 228),
-                                    foregroundColor:
-                                        Color.fromARGB(255, 232, 241, 244),
-                                  ),
-                                  child: Text(
-                                    "Apply Coupon",
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
+                          // Container(
+                          //   child: Row(
+                          //     mainAxisAlignment: MainAxisAlignment.end,
+                          //     children: [
+                          //       ElevatedButton(
+                          //         onPressed: () {
+                          //           //action pel click ler coupon tv
+                          //         },
+                          //         style: ElevatedButton.styleFrom(
+                          //           padding: EdgeInsets.symmetric(
+                          //               vertical: 5, horizontal: 10),
+                          //           shape: RoundedRectangleBorder(
+                          //             borderRadius: BorderRadius.circular(30),
+                          //           ),
+                          //           backgroundColor:
+                          //               Color.fromARGB(172, 65, 128, 204),
+                          //           foregroundColor:
+                          //               Color.fromARGB(255, 255, 250, 250),
+                          //         ),
+                          //         child: Text(
+                          //           "Apply remark",
+                          //           style: GoogleFonts.assistant(
+                          //             fontSize: 15,
+                          //             fontWeight: FontWeight.w500,
+                          //           ),
+                          //         ),
+                          //       ),
+                          //     ],
+                          //   ),
+                          // ),
                         ],
                       ),
                     ),
@@ -281,7 +287,7 @@ class _OrderPageState extends State<OrderPage> {
                     children: [
                       Text(
                         "Bill Summary",
-                        style: TextStyle(
+                        style: GoogleFonts.assistant(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
                         ),
@@ -296,13 +302,13 @@ class _OrderPageState extends State<OrderPage> {
                               children: [
                                 Text(
                                   "${orderItems[i]['name']} x${orderItems[i]['quantity']}",
-                                  style: TextStyle(
+                                  style: GoogleFonts.assistant(
                                     fontSize: 16,
                                   ),
                                 ),
                                 Text(
                                   "\$${calculateItemTotalPrice(i).toStringAsFixed(2)}",
-                                  style: TextStyle(
+                                  style: GoogleFonts.assistant(
                                     fontSize: 16,
                                   ),
                                 ),
@@ -322,13 +328,13 @@ class _OrderPageState extends State<OrderPage> {
                         children: [
                           Text(
                             "Subtotal",
-                            style: TextStyle(
+                            style: GoogleFonts.assistant(
                               fontSize: 16,
                             ),
                           ),
                           Text(
                             "\$${calculateTotal().toStringAsFixed(2)}",
-                            style: TextStyle(
+                            style: GoogleFonts.assistant(
                               fontSize: 16,
                             ),
                           ),
@@ -341,13 +347,13 @@ class _OrderPageState extends State<OrderPage> {
                         children: [
                           Text(
                             "Discount",
-                            style: TextStyle(
+                            style: GoogleFonts.assistant(
                               fontSize: 16,
                             ),
                           ),
                           Text(
                             "-\0.00៛", // Update this value as per the coupon discount logic
-                            style: TextStyle(
+                            style: GoogleFonts.assistant(
                               fontSize: 16,
                             ),
                           ),
@@ -363,14 +369,14 @@ class _OrderPageState extends State<OrderPage> {
                         children: [
                           Text(
                             "Total",
-                            style: TextStyle(
+                            style: GoogleFonts.assistant(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           Text(
                             "\$${calculateTotal().toStringAsFixed(2)}",
-                            style: TextStyle(
+                            style: GoogleFonts.assistant(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
@@ -381,7 +387,7 @@ class _OrderPageState extends State<OrderPage> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(left : 230, top: 10),
+                  padding: EdgeInsets.only(left: 255, top: 10),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
                     boxShadow: [
@@ -409,18 +415,18 @@ class _OrderPageState extends State<OrderPage> {
                         },
                         style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.symmetric(
-                              vertical: 10, horizontal: 20 ), // Adjust padding
-                          textStyle: TextStyle(
+                              vertical: 10, horizontal: 20), // Adjust padding
+                          textStyle: GoogleFonts.assistant(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         child: Text(
                           'Confirm Order',
-                          style: TextStyle(
-                            fontSize: 18,
+                          style: GoogleFonts.assistant(
+                            fontSize: 17,
                             fontWeight: FontWeight.bold,
-                            color : const Color.fromARGB(255, 49, 101, 190),
+                            color: const Color.fromARGB(255, 49, 101, 190),
                           ),
                         ),
                       ),
@@ -431,6 +437,7 @@ class _OrderPageState extends State<OrderPage> {
             ),
           ),
         ),
+      ),
       ),
     );
   }

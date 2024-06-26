@@ -9,7 +9,7 @@ class ImageCarousel extends StatefulWidget {
 }
 
 class _ImageCarouselState extends State<ImageCarousel> {
-  double defaultPadding = 12.0;
+  double defaultPadding =12.0;
   int _currentPage = 0;
 
   final List<String> categories = [
@@ -51,7 +51,7 @@ class _ImageCarouselState extends State<ImageCarousel> {
           ),
           Positioned(
             bottom: defaultPadding,
-            right: defaultPadding,
+            right: 18.0,
             child: Row(
               children: List.generate(
                 categories.length,

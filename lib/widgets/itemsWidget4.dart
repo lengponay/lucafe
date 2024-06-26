@@ -1,6 +1,7 @@
 
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 // import 'package:western/widgets/navBar.dart';
 
 class ItemsWidget4 extends StatefulWidget {
@@ -46,7 +47,7 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
         title: Text(
           "Sucessfully added to cart",
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: GoogleFonts.assistant(
             fontSize: 18,
             color: Colors.white,
           ),
@@ -61,7 +62,7 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
               },
               child: Text(
                 "OK",
-                style: TextStyle(
+                style: GoogleFonts.assistant(
                   color: Colors.white,
                 ),
               ))
@@ -108,13 +109,13 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
     "ds 88",
     "ds ee",
     " ds kk",
+    "ffff",
+    "cdy",
+    "cr",
     "Refreshing choloate served over ice",
-    "Tea with bubble insid, fresh",
+    "Tea with bubble inside, refresh your day",
     "Olong tea, make your day like tea",
-    "Ovaltine, boost your energy",
-    "Description 12",
-    "Description 13",
-    "Description 14"
+    "Ovaltine, Boost your energy and refresh your day."
   ];
 
   final List<String> price = [
@@ -184,7 +185,7 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       itemNames[i],
-                      style: TextStyle(
+                      style: GoogleFonts.assistant(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -196,9 +197,9 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     description[i],
-                    style: TextStyle(
+                    style: GoogleFonts.assistant(
                       fontSize: 12,
-                      fontWeight: FontWeight.w200,
+                      fontWeight: FontWeight.w300,
                       color: Colors.white,
                     ),
                   ),
@@ -213,7 +214,7 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                          color:  Color.fromARGB(255, 106, 132, 173),
+                          color: Color.fromARGB(145, 67, 104, 166),
                           borderRadius: BorderRadius.circular(
                               18), // Circular shape with radius 18
                           boxShadow: [
@@ -233,7 +234,7 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
                           padding: EdgeInsets.only(top: 5, bottom: 2),
                           child: Text(
                             "${price[i]}",
-                            style: TextStyle(
+                            style: GoogleFonts.assistant(
                               fontSize: 15,
                               fontWeight: FontWeight.w400,
                               color: Colors.white,
@@ -252,7 +253,7 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
                         icon: const Icon(Icons.add),
                         style: IconButton.styleFrom(
                             backgroundColor:
-                                Color.fromARGB(255, 195, 244, 228)),
+                                Color.fromARGB(255, 171, 199, 237)),
                       ),
                     ],
                   ),
@@ -287,7 +288,7 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
                   children: [
                     Text(
                       itemNames[i],
-                      style: TextStyle(
+                      style: GoogleFonts.assistant(
                         fontSize: 26,
                         fontWeight: FontWeight.bold,
                       ),
@@ -314,14 +315,14 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
                       children: [
                         Text(
                           "Sugar Level",
-                          style: TextStyle(
+                          style: GoogleFonts.assistant(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         Text(
                           "Optional (+\$0.00)",
-                          style: TextStyle(
+                          style: GoogleFonts.assistant(
                             fontSize: 14,
                             color: const Color.fromARGB(255, 114, 112, 112),
                           ),
@@ -331,7 +332,7 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
                     ListTile(
                       title: Text(
                         'Normal Sugar',
-                        style: TextStyle(
+                        style: GoogleFonts.assistant(
                             fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       leading: Radio<String>(
@@ -347,7 +348,7 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
                     ListTile(
                       title: Text(
                         'Less Sweet',
-                        style: TextStyle(
+                        style: GoogleFonts.assistant(
                             fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       leading: Radio<String>(
@@ -363,7 +364,7 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
                     ListTile(
                       title: Text(
                         'More Sweet',
-                        style: TextStyle(
+                        style: GoogleFonts.assistant(
                             fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       // Set Radio<String> using _color, set value to 'Red', and set activeColor to red
@@ -380,7 +381,7 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
                     ListTile(
                       title: Text(
                         'No Sweet',
-                        style: TextStyle(
+                        style: GoogleFonts.assistant(
                             fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       // Set Radio<String> using _color, set value to 'Red', and set activeColor to red
@@ -407,7 +408,7 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
                     /// show price in bottom sheet
                     Text(
                       price[i],
-                      style: TextStyle(
+                      style: GoogleFonts.assistant(
                         fontSize: 20,
                         color: Colors.red,
                         fontWeight: FontWeight.bold,
@@ -431,7 +432,7 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
                             child: Center(
                               child: Text(
                                 quantityCount.toString(),
-                                style: TextStyle(
+                                style: GoogleFonts.assistant(
                                     fontSize: 16, fontWeight: FontWeight.w400),
                               ),
                             ),
@@ -460,11 +461,11 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
                       // primary: Colors.green,
                       padding:
                           EdgeInsets.symmetric(horizontal: 80, vertical: 20),
-                      backgroundColor: Colors.green,
+                      backgroundColor: Color.fromARGB(255, 108, 136, 176),
                     ),
                     child: Text(
                       "Add to Cart",
-                      style: TextStyle(
+                      style: GoogleFonts.assistant(
                         fontSize: 20,
                         color: Colors.white,
                         fontWeight: FontWeight.w600,

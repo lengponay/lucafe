@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:western/pages/Order/trackOrder.dart'; // Ensure this import is correct
 
 class PaymentPage extends StatefulWidget {
@@ -33,7 +34,7 @@ class _PaymentPageState extends State<PaymentPage> {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [Color(0xFF4A90E2), Color(0xFF50C9C3)],
+          colors:  [Color.fromARGB(255, 74, 140, 215), Color.fromARGB(255, 217, 222, 222)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -57,7 +58,7 @@ class _PaymentPageState extends State<PaymentPage> {
             padding: EdgeInsets.only(left: 4),
             child: Text(
               "Confirm Order",
-              style: TextStyle(
+              style: GoogleFonts.assistant(
                 color: Colors.white,
                 fontSize: 25,
                 fontWeight: FontWeight.w400,
@@ -91,7 +92,7 @@ class _PaymentPageState extends State<PaymentPage> {
                   padding: EdgeInsets.only(left: 5),
                   child: Text(
                     "Your Bill Summary",
-                    style: TextStyle(
+                    style: GoogleFonts.assistant(
                       fontSize: 20,
                       color: Colors.white,
                       fontWeight: FontWeight.w400,
@@ -118,13 +119,13 @@ class _PaymentPageState extends State<PaymentPage> {
                               children: [
                                 Text(
                                   "${widget.orderItems[i]['name']} x${widget.orderItems[i]['quantity']}",
-                                  style: TextStyle(
+                                  style: GoogleFonts.assistant(
                                     fontSize: 16,
                                   ),
                                 ),
                                 Text(
                                   "\$${calculateItemTotalPrice(i).toStringAsFixed(2)}",
-                                  style: TextStyle(
+                                  style: GoogleFonts.assistant(
                                     fontSize: 16,
                                   ),
                                 ),
@@ -142,13 +143,13 @@ class _PaymentPageState extends State<PaymentPage> {
                           children: [
                             Text(
                               "Subtotal",
-                              style: TextStyle(
+                              style: GoogleFonts.assistant(
                                 fontSize: 16,
                               ),
                             ),
                             Text(
                               "\$${calculateTotal().toStringAsFixed(2)}",
-                              style: TextStyle(
+                              style: GoogleFonts.assistant(
                                 fontSize: 16,
                               ),
                             ),
@@ -160,13 +161,13 @@ class _PaymentPageState extends State<PaymentPage> {
                           children: [
                             Text(
                               "Discount",
-                              style: TextStyle(
+                              style: GoogleFonts.assistant(
                                 fontSize: 16,
                               ),
                             ),
                             Text(
                               "-\$0.00", // Update this value as per the coupon discount logic
-                              style: TextStyle(
+                              style: GoogleFonts.assistant(
                                 fontSize: 16,
                               ),
                             ),
@@ -182,14 +183,14 @@ class _PaymentPageState extends State<PaymentPage> {
                           children: [
                             Text(
                               "Total",
-                              style: TextStyle(
+                              style: GoogleFonts.assistant(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             Text(
                               "\$${calculateTotal().toStringAsFixed(2)}",
-                              style: TextStyle(
+                              style: GoogleFonts.assistant(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -205,7 +206,7 @@ class _PaymentPageState extends State<PaymentPage> {
                   padding: EdgeInsets.only(left: 7),
                   child: Text(
                     "Payment Method",
-                    style: TextStyle(
+                    style: GoogleFonts.assistant(
                       color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.w400,
@@ -237,7 +238,7 @@ class _PaymentPageState extends State<PaymentPage> {
                             SizedBox(width: 5),
                             Text(
                               "Cash Payment",
-                              style: TextStyle(
+                              style: GoogleFonts.assistant(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w500,
                                 color: Colors.black,
@@ -275,7 +276,7 @@ class _PaymentPageState extends State<PaymentPage> {
                             SizedBox(width: 5),
                             Text(
                               "Credit Card / Acleda Bank",
-                              style: TextStyle(
+                              style: GoogleFonts.assistant(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w500,
                                 color: Colors.black,
@@ -313,7 +314,7 @@ class _PaymentPageState extends State<PaymentPage> {
                     boxShadow: [
                       BoxShadow(
                         color: const Color.fromARGB(255, 86, 80, 80)
-                            .withOpacity(0.2),
+                            .withOpacity(0.1),
                         spreadRadius: 1,
                         blurRadius: 8,
                         offset: Offset(0, 2),
@@ -330,17 +331,17 @@ class _PaymentPageState extends State<PaymentPage> {
                           children: [
                             Icon(
                               Icons.pin_drop_sharp,
-                              color: const Color.fromARGB(255, 215, 200, 200),
+                              color: Color.fromARGB(255, 255, 250, 250),
                               size: 30,
                             ),
                             SizedBox(width: 5),
                             Flexible(
                               child: Text(
                                 " Pick Up At LU Coffee",
-                                style: TextStyle(
+                                style: GoogleFonts.assistant(
                                   fontSize: 18,
                                   fontWeight: FontWeight.w500,
-                                  color: Color.fromARGB(255, 228, 221, 221),
+                                  color: Color.fromARGB(255, 250, 246, 246),
                                 ),
                               ),
                             ),
@@ -380,14 +381,14 @@ class _PaymentPageState extends State<PaymentPage> {
                           style: ElevatedButton.styleFrom(
                             padding: EdgeInsets.symmetric(
                                 vertical: 12, horizontal: 20), // Adjust padding
-                            textStyle: TextStyle(
+                            textStyle: GoogleFonts.assistant(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           child: Text(
                             'Place Order',
-                            style: TextStyle(
+                            style: GoogleFonts.assistant(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                               color : const Color.fromARGB(255, 51, 102, 190),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:western/widgets/itemsWidget.dart';
 import 'package:western/widgets/itemsWidget2.dart';
 import 'package:western/widgets/itemsWidget3.dart';
@@ -17,7 +18,7 @@ class MenuPage extends StatelessWidget {
         body: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [Color(0xFF4A90E2), Color(0xFF50C9C3)],
+              colors: [Color.fromARGB(255, 74, 140, 215), Color.fromARGB(255, 217, 222, 222)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
@@ -45,7 +46,7 @@ class MenuPage extends StatelessWidget {
                         ),
                         Text(
                           "Menu",
-                          style: TextStyle(
+                          style: GoogleFonts.assistant(
                             fontSize: 28,
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -53,7 +54,7 @@ class MenuPage extends StatelessWidget {
                         ),
                         InkWell(
                           onTap: () {
-                            Navigator.pushNamed(context, "/order");
+                            Navigator.pushNamed(context, "/cart");
                           },
                           child: Icon(
                             Icons.shopping_cart_checkout_rounded,
@@ -77,8 +78,8 @@ class MenuPage extends StatelessWidget {
                         SizedBox(width: 10),
                         Text(
                           "Open from 7AM Until 5PM",
-                          style: TextStyle(
-                            fontSize: 15,
+                          style: GoogleFonts.assistant(
+                            fontSize: 19,
                             color: Colors.white,
                             fontWeight: FontWeight.w300,
                           ),
@@ -99,8 +100,8 @@ class MenuPage extends StatelessWidget {
                         SizedBox(width: 10),
                         Text(
                           "Self-PickUp at the LU Coffee",
-                          style: TextStyle(
-                            fontSize: 15,
+                          style: GoogleFonts.assistant(
+                            fontSize: 18,
                             color: Colors.white,
                             fontWeight: FontWeight.w300,
                           ),
@@ -121,8 +122,8 @@ class MenuPage extends StatelessWidget {
                         SizedBox(width: 10),
                         Text(
                           "9.5    100+ ratings",
-                          style: TextStyle(
-                            fontSize: 15,
+                          style: GoogleFonts.assistant(
+                            fontSize: 18,
                             color: Color.fromARGB(255, 29, 15, 15),
                             fontWeight: FontWeight.w500,
                           ),
@@ -133,16 +134,18 @@ class MenuPage extends StatelessWidget {
                   SizedBox(height: 8),
                   TabBar(
                     isScrollable: true,
+                    labelColor: Color.fromARGB(255, 255, 249, 249),
+                    // indicatorColor: Colors.blue,
                     indicator: BoxDecoration(),
-                    labelStyle: TextStyle(
-                      fontSize: 20,
+                    labelStyle: GoogleFonts.assistant(
+                      fontSize: 21,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                     ),
                     labelPadding: EdgeInsets.symmetric(horizontal: 20),
                     tabs: [
-                      Tab(text: "Cold-Coffee"),
-                      Tab(text: "Hot-Coffee"),
+                      Tab(text: "Cold Coffee"),
+                      Tab(text: "Hot Coffee"),
                       Tab(text: "Tea"),
                       Tab(text: "Milk Tea"),
                       Tab(text: "Soft Drinks"),

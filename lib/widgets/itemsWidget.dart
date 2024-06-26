@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ItemsWidget extends StatefulWidget {
   @override
@@ -45,7 +46,7 @@ class _ItemsWidgetState extends State<ItemsWidget> {
         title: Text(
           "Sucessfully added to cart",
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: GoogleFonts.assistant(
             fontSize: 18,
             color: Colors.white,
           ),
@@ -60,7 +61,7 @@ class _ItemsWidgetState extends State<ItemsWidget> {
               },
               child: Text(
                 "OK",
-                style: TextStyle(
+                style: GoogleFonts.assistant(
                   color: Colors.white,
                 ),
               ))
@@ -124,7 +125,7 @@ class _ItemsWidgetState extends State<ItemsWidget> {
                   children: [
                     Text(
                       itemNames[i],
-                      style: TextStyle(
+                      style: GoogleFonts.assistant(
                         fontSize: 26,
                         fontWeight: FontWeight.bold,
                       ),
@@ -151,14 +152,14 @@ class _ItemsWidgetState extends State<ItemsWidget> {
                       children: [
                         Text(
                           "Sugar Level",
-                          style: TextStyle(
+                          style: GoogleFonts.assistant(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         Text(
                           "Optional (+\$0.00)",
-                          style: TextStyle(
+                          style: GoogleFonts.assistant(
                             fontSize: 14,
                             color: const Color.fromARGB(255, 114, 112, 112),
                           ),
@@ -168,7 +169,7 @@ class _ItemsWidgetState extends State<ItemsWidget> {
                     ListTile(
                       title: Text(
                         'Normal Sugar',
-                        style: TextStyle(
+                        style: GoogleFonts.assistant(
                             fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       leading: Radio<String>(
@@ -184,7 +185,7 @@ class _ItemsWidgetState extends State<ItemsWidget> {
                     ListTile(
                       title: Text(
                         'Less Sweet',
-                        style: TextStyle(
+                        style: GoogleFonts.assistant(
                             fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       leading: Radio<String>(
@@ -200,7 +201,7 @@ class _ItemsWidgetState extends State<ItemsWidget> {
                     ListTile(
                       title: Text(
                         'More Sweet',
-                        style: TextStyle(
+                        style: GoogleFonts.assistant(
                             fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       // Set Radio<String> using _color, set value to 'Red', and set activeColor to red
@@ -217,7 +218,7 @@ class _ItemsWidgetState extends State<ItemsWidget> {
                     ListTile(
                       title: Text(
                         'No Sweet',
-                        style: TextStyle(
+                        style: GoogleFonts.assistant(
                             fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       // Set Radio<String> using _color, set value to 'Red', and set activeColor to red
@@ -241,10 +242,11 @@ class _ItemsWidgetState extends State<ItemsWidget> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    
                     /// show price in bottom sheet
                     Text(
                       price[i],
-                      style: TextStyle(
+                      style: GoogleFonts.assistant(
                         fontSize: 20,
                         color: Colors.red,
                         fontWeight: FontWeight.bold,
@@ -272,7 +274,7 @@ class _ItemsWidgetState extends State<ItemsWidget> {
                             child: Center(
                               child: Text(
                                 quantityCount.toString(),
-                                style: TextStyle(
+                                style: GoogleFonts.assistant(
                                     fontSize: 16, fontWeight: FontWeight.w400),
                               ),
                             ),
@@ -303,12 +305,12 @@ class _ItemsWidgetState extends State<ItemsWidget> {
                     onPressed: addToCart,
                     style: ElevatedButton.styleFrom(
                       // primary: Colors.green,
-                      padding: EdgeInsets.symmetric(horizontal: 80, vertical: 20),
-                      backgroundColor: const Color.fromARGB(255, 120, 125, 121),
+                      padding: EdgeInsets.symmetric(horizontal: 70, vertical: 20),
+                      backgroundColor: Color.fromARGB(255, 108, 136, 176),
                     ),
                     child: Text(
                       "Add to Cart",
-                      style: TextStyle(
+                      style: GoogleFonts.assistant(
                         fontSize: 20,
                         color: Colors.white,
                         fontWeight: FontWeight.w600,
@@ -369,7 +371,7 @@ class _ItemsWidgetState extends State<ItemsWidget> {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       itemNames[i],
-                      style: TextStyle(
+                      style: GoogleFonts.assistant(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -381,9 +383,9 @@ class _ItemsWidgetState extends State<ItemsWidget> {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     description[i],
-                    style: TextStyle(
+                    style: GoogleFonts.assistant(
                       fontSize: 12,
-                      fontWeight: FontWeight.w200,
+                      fontWeight: FontWeight.w300,
                       color: Colors.white,
                     ),
                   ),
@@ -395,11 +397,11 @@ class _ItemsWidgetState extends State<ItemsWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        padding : EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                        margin : EdgeInsets.symmetric(vertical: 7),
+                        padding : EdgeInsets.symmetric(vertical: 3, horizontal: 10),
+                        margin : EdgeInsets.symmetric(vertical: 5),
                         decoration : BoxDecoration(
                           borderRadius : BorderRadius.circular(20),
-                          color: Color.fromARGB(255, 106, 132, 173),
+                          color:  Color.fromARGB(145, 67, 104, 166),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black.withOpacity(0.2), // Shadow color with opacity
@@ -416,8 +418,8 @@ class _ItemsWidgetState extends State<ItemsWidget> {
                           padding: EdgeInsets.only(top: 5, bottom: 2),
                           child: Text(
                             price[i],
-                            style: TextStyle(
-                              fontSize: 17,
+                            style: GoogleFonts.assistant(
+                              fontSize: 15,
                               fontWeight: FontWeight.w400,
                               color: Colors.white,
                             ),
@@ -435,7 +437,7 @@ class _ItemsWidgetState extends State<ItemsWidget> {
                         },
                         icon: const Icon(Icons.add),
                         style: IconButton.styleFrom(
-                            backgroundColor: Color.fromARGB(255, 195, 244, 228)),
+                            backgroundColor: Color.fromARGB(255, 171, 199, 237)),
                       ),
                     ],
                   ),

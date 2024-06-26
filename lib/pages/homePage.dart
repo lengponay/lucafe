@@ -1,10 +1,8 @@
-// import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:async';
-
 import '../components/eventsTile.dart';
 import '../components/imageCarousel.dart';
 import '../components/sectionTile.dart';
@@ -21,7 +19,6 @@ class _HomePageState extends State<HomePage> {
 
   final Uri websiteUrl = Uri.parse('https://lifeun.edu.kh');
 
-  //website access
   Future<void> _launchURL() async {
     if (!await launch(websiteUrl.toString())) {
       throw 'Could not launch $websiteUrl';
@@ -31,44 +28,44 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    var defaultPadding = screenSize.width * 0.03;
+    var defaultPadding = screenSize.width * 0.04;
 
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [Color.fromARGB(255, 51, 104, 165), Color.fromARGB(255, 61, 149, 145)],
+          colors: [Color.fromARGB(255, 74, 140, 215), Color.fromARGB(255, 217, 222, 222)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        body: CustomScrollView(
-          slivers: <Widget>[
-            SliverAppBar(
-              expandedHeight: screenSize.height * 0.12,
-              elevation: 0.0,
-              backgroundColor: Colors.transparent,
-              flexibleSpace: Padding(
-                padding: EdgeInsets.only(
-                    left: defaultPadding,
-                    top: screenSize.height * 0.06,
-                    right: defaultPadding / 2,
-                    bottom: defaultPadding / 2),
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(screenSize.height * 0.11), 
+          child: AppBar(
+            elevation: 0.0,
+            backgroundColor: Colors.transparent,
+            automaticallyImplyLeading: false,
+            flexibleSpace: Padding(
+              padding: EdgeInsets.all(12.0),
+              child: SizedBox(
+                height: screenSize.height * 0.15,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           "Hello, Oliva!",
-                          style: GoogleFonts.dmSerifDisplay(
+                          style: GoogleFonts.assistant(
                             fontSize: screenSize.width * 0.07,
                             color: Color.fromARGB(255, 239, 239, 244),
                           ),
+                          overflow: TextOverflow.ellipsis,
                         ),
-                        
                         IconButton(
                           icon: Icon(
                             Icons.notifications,
@@ -81,151 +78,108 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children :[
-                        Text(
-                            "What do you want to have today? :)",
-                            style: TextStyle(
-                              fontSize: screenSize.width * 0.04,
-                              color: Color.fromARGB(255, 239, 239, 244),
-                              fontWeight : FontWeight.w500,
-                            ),
-                        ),
-                      
-                      ],
-                    ),
-                    
-                    // Row(
-                    //   mainAxisAlignment: MainAxisAlignment.start,
-                    //   children: [
-                    //     Icon(
-                    //       Icons.pin_drop,
-                    //       size: screenSize.width * 0.05,
-                    //       color: Colors.white38,
-                    //     ),
-                    //     Text(
-                    //       " lu café (near conference room)",
-                    //       style: TextStyle(
-                    //         color: Colors.white38,
-                    //         fontSize: screenSize.width * 0.04,
-                    //         fontWeight: FontWeight.w400,
-                    //       ),
-                    //     ),
-                    //   ],
-                    // ),
-                    // SizedBox(height: screenSize.height * 0.01),
-                    // Row(
-                    //   mainAxisAlignment: MainAxisAlignment.start,
-                    //   children: [
-                    //     Icon(
-                    //       Icons.timer,
-                    //       size: screenSize.width * 0.05,
-                    //       color: Colors.white38,
-                    //     ),
-                    //     Text(
-                    //       " Preparing time 5-10mns",
-                    //       style: TextStyle(
-                    //         color: Colors.white38,
-                    //         fontSize: screenSize.width * 0.04,
-                    //         fontWeight: FontWeight.w400,
-                    //       ),
-                    //     ),
-                    //   ],
-                    // ),
-                    
-                  ],
-                ),
-              ),
-            ),
-
-            SliverPadding(
-              padding: EdgeInsets.symmetric(horizontal: defaultPadding),
-              sliver: SliverToBoxAdapter(
-                child: ImageCarousel(),
-              ),
-            ),
-
-            SliverPadding(
-              padding: EdgeInsets.all(defaultPadding),
-              sliver: SliverToBoxAdapter(
-                child: Row(
-                  children: [
                     Text(
-                      "Recommended Drinks",
-                      style: TextStyle(
-                        fontSize: screenSize.width * 0.05,
-                        fontWeight: FontWeight.w600,
-                        color: const Color.fromARGB(255, 255, 249, 249),
+                      "What do you want to have today?",
+                      style: GoogleFonts.assistant(
+                        fontSize: screenSize.width * 0.04,
+                        color: Color.fromARGB(255, 239, 239, 244),
+                        fontWeight: FontWeight.w500,
                       ),
+                      overflow: TextOverflow.ellipsis,
                     ),
+                    
                   ],
                 ),
               ),
             ),
-
-            SliverToBoxAdapter(
-              child: SectionTile(),
-            ),
-
-            SliverPadding(
-              padding: EdgeInsets.all(defaultPadding),
-              sliver: SliverToBoxAdapter(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: screenSize.height * 0.01),
+          ),
+        ),
+        body: SafeArea(
+          child: CustomScrollView(
+            slivers: <Widget>[
+              SliverPadding(
+                padding: EdgeInsets.symmetric(vertical: 50),
+                sliver: SliverToBoxAdapter(
+                  child: ImageCarousel(),
+                ),
+              ),
+              SliverPadding(
+                padding: EdgeInsets.all(18.0),
+                sliver: SliverToBoxAdapter(
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Life University & FC Events",
-                        style: TextStyle(
-                          fontSize: screenSize.width * 0.05,
-                          fontWeight: FontWeight.w600,
+                        "Recommended Drinks",
+                        style: GoogleFonts.assistant(
+                          fontSize: screenSize.width * 0.06,
+                          fontWeight: FontWeight.w500,
                           color: const Color.fromARGB(255, 255, 249, 249),
                         ),
-                      ),
-                      TextButton(
-                        child: Text(
-                          "see more",
-                          style: TextStyle(
-                            fontSize: screenSize.width * 0.04,
-                            fontWeight: FontWeight.w400,
-                            color: const Color.fromARGB(255, 50, 28, 101),
-                          ),
-                        ),
-                        onPressed: _launchURL,
                       ),
                     ],
                   ),
                 ),
               ),
-            ),
-
-            SliverToBoxAdapter(
-              child: EventsTile(),
-            ),
-
-            SliverPadding(
-              padding: EdgeInsets.symmetric(horizontal: defaultPadding),
-              sliver: SliverToBoxAdapter(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 5.0),
-                  child: Divider(
-                    color: Colors.white,
-                    thickness: 2,
-                    indent: 0,
-                    endIndent: 0,
+              SliverToBoxAdapter(
+                child: SectionTile(),
+              ),
+              SliverPadding(
+                padding: EdgeInsets.all(defaultPadding),
+                sliver: SliverToBoxAdapter(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(vertical: screenSize.height * 0.01),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Life University & FC Events",
+                          style: GoogleFonts.assistant(
+                            fontSize: screenSize.width * 0.06,
+                            fontWeight: FontWeight.w500,
+                            color: const Color.fromARGB(255, 255, 249, 249),
+                          ),
+                        ),
+                        SizedBox(width : 5),
+                        TextButton(
+                          child: Text(
+                            "see more",
+                            style: TextStyle(
+                              fontSize: screenSize.width * 0.04,
+                              fontWeight: FontWeight.w400,
+                              color: Color.fromARGB(255, 44, 25, 88),
+                            ),
+                          ),
+                          onPressed: _launchURL,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+              SliverToBoxAdapter(
+                child: EventsTile(),
+              ),
+              SliverPadding(
+                padding: EdgeInsets.symmetric(horizontal: defaultPadding),
+                sliver: SliverToBoxAdapter(
+                  child: Padding(
+                    padding: EdgeInsets.zero,
+                    child: Divider(
+                      color: Colors.white,
+                      thickness: 2,
+                      indent: 0,
+                      endIndent: 0,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
-
         bottomNavigationBar: CurvedNavigationBar(
           backgroundColor: Colors.transparent,
-          buttonBackgroundColor: Color.fromARGB(255, 47, 116, 146),
-          color: Color.fromARGB(255, 45, 137, 167),
+          buttonBackgroundColor: Color.fromARGB(255, 103, 165, 235),
+          color: Color.fromARGB(232, 93, 159, 225),
           animationDuration: Duration(milliseconds: 300),
           items: <Widget>[
             Icon(
@@ -238,11 +192,11 @@ class _HomePageState extends State<HomePage> {
               color: Colors.white,
               size: screenSize.width * 0.09,
             ),
-            Icon(
-              Icons.shopping_cart,
-              color: Colors.white,
-              size: screenSize.width * 0.09,
-            ),
+            // Icon(
+            //   Icons.shopping_cart,
+            //   color: Colors.white,
+            //   size: screenSize.width * 0.09,
+            // ),
             Icon(
               Icons.list_alt_rounded,
               color: Colors.white,
@@ -266,14 +220,14 @@ class _HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, '/menu');
                 break;
               case 2:
-                // Navigator.pushNamed(context, '/cart');
+                Navigator.pushNamed(context, '/cart');
                 break;
               case 3:
-                Navigator.pushNamed(context, '/order');
-                break;
-              case 4:
                 Navigator.pushNamed(context, '/account');
                 break;
+              // case 4:
+              //   Navigator.pushNamed(context, '/account');
+              //                 break;
               default:
                 break;
             }

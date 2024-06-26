@@ -12,7 +12,7 @@ class IntroPage extends StatelessWidget {
         body: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
-              colors: [Color(0xFF4A90E2), Color(0xFF50C9C3)], 
+              colors:  [Color.fromARGB(255, 74, 140, 215), Color.fromARGB(255, 217, 222, 222)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
@@ -29,17 +29,22 @@ class IntroPage extends StatelessWidget {
                 
           
                     // WELCOME TO LU COFFEE TEXT
-                    Padding(
-                      padding: const EdgeInsets.only(left:0, right:10 ),
-                      child: Text(
-                              "Welcome\nTo\n LU Coffee !!",
-                              textAlign: TextAlign.center,
-                              style: GoogleFonts.k2d(
-                                fontSize: 48,
-                                fontWeight: FontWeight.bold,
-                                color: const Color.fromARGB(222, 20, 20, 20),
-                              ),
-                            ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right:10 ),
+                          child: Text(
+                                  "Welcome To\n LU Coffee",
+                                  textAlign: TextAlign.center,
+                                  style: GoogleFonts.assistant(
+                                    fontSize: 48,
+                                    fontWeight: FontWeight.w700,
+                                    color: const Color.fromARGB(222, 20, 20, 20),
+                                  ),
+                                ),
+                        ),
+                      ],
                     ),
               
           
@@ -48,9 +53,9 @@ class IntroPage extends StatelessWidget {
           
                     // COFFEE IMAGE
                     Opacity(
-                      opacity: 0.89,
+                      opacity: 0.80,
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 85, right: 85),
+                        padding: const EdgeInsets.only(left: 90, right: 90),
                         child: Image.asset(
                           "lib/images/introPic/Coffee_Cup.png",
                         ),
@@ -58,15 +63,15 @@ class IntroPage extends StatelessWidget {
                     ),
                     
           
-                    const SizedBox (height: 15,),
+                    SizedBox (height: 20,),
           
           
                     Text(
-                        "Coffee makes everything better !!",
-                        style : GoogleFonts.ibarraRealNova(
+                        "Coffee makes everything better!",
+                        style : GoogleFonts.assistant(
                             fontSize: 22,
                             color: const Color.fromARGB(255, 2, 1, 1),
-                            fontWeight: FontWeight.w800,
+                            fontWeight: FontWeight.w500,
                         ),
                       ),
           
@@ -82,12 +87,10 @@ class IntroPage extends StatelessWidget {
                           Navigator.pushNamed(context, "/signIn");
                         } ,
                     ),
-          
                 ],
               ),
-                 ),
+            ),
         ),
-     
     );
   }
 }

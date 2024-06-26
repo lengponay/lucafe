@@ -24,17 +24,30 @@ class _ChangePasswordState extends State<ChangePassword> {
   @override
   Widget build(BuildContext context){
 
-    return Scaffold(
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Color.fromARGB(255, 74, 140, 215),
+            Color.fromARGB(255, 217, 222, 222)
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+      ),
+    
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
         appBar: AppBar(
-          // title: const Text("Change Password"),
-          // backgroundColor: Colors.deepPurple,
-          // elevation: 0,
           
           title:const Text("Change Password"),
               flexibleSpace: Container(
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [Color(0xFF4A90E2), Color(0xFF50C9C3)], 
+                    colors: [
+                      Color.fromARGB(255, 74, 140, 215),
+                      Color.fromARGB(255, 217, 222, 222)
+                    ],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                 ),
@@ -66,17 +79,21 @@ class _ChangePasswordState extends State<ChangePassword> {
                               enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(13.0),
                                 borderSide: const BorderSide(
-                                  color: Color.fromARGB(255, 116, 112, 112),
+                                  color: Color.fromARGB(255, 73, 45, 83),
                                 ),
                               ),
 
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(13.0),
-                                borderSide: const BorderSide(color: Colors.indigoAccent),
+                                borderSide: const BorderSide(color: Color.fromARGB(255, 73, 83, 142)),
                               ),
 
-                              fillColor: const Color.fromARGB(207, 238, 249, 244),
+                              fillColor: Color.fromARGB(207, 247, 255, 247),
                               labelText: "Current Password",
+                              labelStyle: TextStyle(
+                                color: Color.fromARGB(255, 75, 71, 71),
+                              ),
+
                               hintText: "Must be at least 8 characters",
                               suffixIcon: IconButton(
                                 icon: Icon(_isSecurePassword ? Icons.visibility_off : Icons.visibility),
@@ -109,17 +126,20 @@ class _ChangePasswordState extends State<ChangePassword> {
                               enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(13.0),
                                 borderSide: const BorderSide(
-                                  color: Color.fromARGB(255, 116, 112, 112),
+                                  color: Color.fromARGB(255, 73, 45, 83),
                                 ),
                               ),
 
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(13.0),
-                                borderSide: const BorderSide(color: Colors.indigoAccent),
+                                borderSide: const BorderSide(color: Color.fromARGB(255, 73, 83, 142)),
                               ),
 
                                 fillColor: const Color.fromARGB(207, 238, 249, 244),
                                 labelText: "New Password",
+                                labelStyle: TextStyle(
+                                  color: Color.fromARGB(255, 75, 71, 71),
+                                ),
                                 hintText: "Must be at least 8 characters",
                                 suffixIcon: IconButton(
                                   icon: Icon(_isSecurePassword2 ? Icons.visibility_off : Icons.visibility),
@@ -154,17 +174,20 @@ class _ChangePasswordState extends State<ChangePassword> {
                                   enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(13.0),
                                     borderSide: const BorderSide(
-                                      color: Color.fromARGB(255, 116, 112, 112),
+                                      color: Color.fromARGB(255, 73, 45, 83),
                                     ),
                                   ),
 
                                   focusedBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(13.0),
-                                    borderSide: const BorderSide(color: Colors.indigoAccent),
+                                    borderSide: const BorderSide(color: Color.fromARGB(255, 73, 83, 142)),
                                   ),
 
                                   fillColor: const Color.fromARGB(207, 238, 249, 244),
                                   labelText: "Confirm Password",
+                                  labelStyle: TextStyle(
+                                    color: Color.fromARGB(255, 69, 67, 67),
+                                  ),
                                   hintText: "Verify Password",
                                   suffixIcon: IconButton(
                                     icon: Icon(_isSecurePassword3 ? Icons.visibility_off : Icons.visibility),
@@ -202,8 +225,7 @@ class _ChangePasswordState extends State<ChangePassword> {
               ),
           ),
         ),
-
+      ),
     );
   }
-
 }

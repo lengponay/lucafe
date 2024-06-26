@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 // import 'package:western/widgets/navBar.dart';
 
 class ItemsWidget3 extends StatefulWidget {
@@ -47,7 +48,7 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
         title: Text(
           "Sucessfully added to cart",
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: GoogleFonts.assistant(
             fontSize: 18,
             color: Colors.white,
           ),
@@ -62,7 +63,7 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
               },
               child: Text(
                 "OK",
-                style: TextStyle(
+                style: GoogleFonts.assistant(
                   color: Colors.white,
                 ),
               ))
@@ -181,7 +182,7 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
                     alignment: Alignment.centerLeft,
                     child: Text(
                       itemNames[i],
-                      style: TextStyle(
+                      style: GoogleFonts.assistant(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -193,9 +194,9 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     description[i],
-                    style: TextStyle(
+                    style: GoogleFonts.assistant(
                       fontSize: 12,
-                      fontWeight: FontWeight.w200,
+                      fontWeight: FontWeight.w300,
                       color: Colors.white,
                     ),
                   ),
@@ -210,7 +211,7 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                          color:  Color.fromARGB(255, 106, 132, 173),
+                          color: Color.fromARGB(145, 67, 104, 166),
                           borderRadius: BorderRadius.circular(
                               18), // Circular shape with radius 18
                           boxShadow: [
@@ -230,7 +231,7 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
                           padding: EdgeInsets.only(top: 5, bottom: 2),
                           child: Text(
                             price[i],
-                            style: TextStyle(
+                            style: GoogleFonts.assistant(
                               fontSize: 15,
                               fontWeight: FontWeight.w400,
                               color: Colors.white,
@@ -247,7 +248,7 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
                         icon: const Icon(Icons.add),
                         style: IconButton.styleFrom(
                             backgroundColor:
-                                Color.fromARGB(255, 195, 244, 228)),
+                                Color.fromARGB(255, 171, 199, 237)),
                       ),
                     ],
                   ),
@@ -282,7 +283,7 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
                   children: [
                     Text(
                       itemNames[i],
-                      style: TextStyle(
+                      style: GoogleFonts.assistant(
                         fontSize: 26,
                         fontWeight: FontWeight.bold,
                       ),
@@ -309,14 +310,14 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
                       children: [
                         Text(
                           "Sugar Level",
-                          style: TextStyle(
+                          style: GoogleFonts.assistant(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         Text(
                           "Optional (+\$0.00)",
-                          style: TextStyle(
+                          style: GoogleFonts.assistant(
                             fontSize: 14,
                             color: const Color.fromARGB(255, 114, 112, 112),
                           ),
@@ -326,7 +327,7 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
                     ListTile(
                       title: Text(
                         'Normal Sugar',
-                        style: TextStyle(
+                        style: GoogleFonts.assistant(
                             fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       leading: Radio<String>(
@@ -342,7 +343,7 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
                     ListTile(
                       title: Text(
                         'Less Sweet',
-                        style: TextStyle(
+                        style: GoogleFonts.assistant(
                             fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       leading: Radio<String>(
@@ -358,7 +359,7 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
                     ListTile(
                       title: Text(
                         'More Sweet',
-                        style: TextStyle(
+                        style: GoogleFonts.assistant(
                             fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       // Set Radio<String> using _color, set value to 'Red', and set activeColor to red
@@ -375,7 +376,7 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
                     ListTile(
                       title: Text(
                         'No Sweet',
-                        style: TextStyle(
+                        style: GoogleFonts.assistant(
                             fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       // Set Radio<String> using _color, set value to 'Red', and set activeColor to red
@@ -402,7 +403,7 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
                     /// show price in bottom sheet
                     Text(
                       price[i],
-                      style: TextStyle(
+                      style: GoogleFonts.assistant(
                         color: Colors.red,
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -426,7 +427,7 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
                             child: Center(
                               child: Text(
                                 quantityCount.toString(),
-                                style: TextStyle(
+                                style: GoogleFonts.assistant(
                                     fontSize: 16, fontWeight: FontWeight.w400),
                               ),
                             ),
@@ -455,11 +456,11 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
                       // primary: Colors.green,
                       padding:
                           EdgeInsets.symmetric(horizontal: 80, vertical: 20),
-                      backgroundColor: Colors.green,
+                      backgroundColor:Color.fromARGB(255, 108, 136, 176),
                     ),
                     child: Text(
                       "Add to Cart",
-                      style: TextStyle(
+                      style: GoogleFonts.assistant(
                         fontSize: 20,
                         color: Colors.white,
                         fontWeight: FontWeight.w600,

@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:western/pages/IntroPage/signUpPage.dart';
 import 'package:western/pages/Order/PaymentPage.dart';
+import 'package:western/pages/account/languages.dart';
+import 'package:western/pages/account/profile.dart';
 import 'package:western/pages/menu.dart';
 import 'package:western/pages/notificationPage.dart';
 import 'package:western/pages/Order/order.dart';
-import 'package:western/pages/profile.dart';
+
 import 'package:western/pages/Order/trackOrder.dart';
 import 'pages/IntroPage/introPage.dart';
 
@@ -39,14 +41,17 @@ class _MyAppState extends State<MyApp> {
         "/": (context) => IntroPage(), // Show IntroPage first
         '/home': (context) => HomePage(),
         '/menu': (context) => MenuPage(),
+        '/cart': (context) => OrderPage(),
         '/notification': (context) => Notificationpage(),
+        //"/order": (context) => PaymentPage(orderItems: [],),
         "/order": (context) => OrderPage(),
-        "/payment": (context) => PaymentPage(orderItems: [],),
+        //"/payment": (context) => PaymentPage(orderItems: [],),
         "/trackOrder": (context) => TrackOrder(),
         "/account": (context) => ProfilePage(),
         "/signIn": (context) => SignInPage(), 
         "/signUp": (context) => SignUpPage(), 
         "/changePw": (context) => ChangePassword(), 
+        "/languages" : (context) => Languages(),
       },
     );
   }

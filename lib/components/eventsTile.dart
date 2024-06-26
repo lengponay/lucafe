@@ -35,7 +35,7 @@ class _EventsTileState extends State<EventsTile> with AutomaticKeepAliveClientMi
 
       _pageController.animateToPage(
         _currentPage,
-        duration: Duration(milliseconds: 500),
+        duration: Duration(milliseconds: 10000),
         curve: Curves.easeIn,
       );
     });
