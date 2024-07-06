@@ -255,7 +255,8 @@ class _EditProfileState extends State<EditProfile> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(80),
                         ),
-                        child: Text(
+                        child:
+                         Text(
                           "Save",
                           style: TextStyle(
                             color: Color.fromARGB(255, 90, 146, 210),

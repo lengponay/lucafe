@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 import 'package:western/pages/IntroPage/signUpPage.dart';
-import 'package:western/pages/Order/PaymentPage.dart';
+// import 'package:western/pages/Order/PaymentPage.dart';
+import 'package:western/pages/Order/order_provider.dart';
 import 'package:western/pages/account/languages.dart';
 import 'package:western/pages/account/profile.dart';
 import 'package:western/pages/menu.dart';
@@ -17,7 +19,14 @@ import 'pages/homePage.dart';
 
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    MultiProvider(providers: [
+      ChangeNotifierProvider(create: (_)=> OrderProvider()),
+    ],
+      child:MyApp(),
+    ),
+  );
+
 }
 
 class MyApp extends StatefulWidget {
@@ -48,10 +57,10 @@ class _MyAppState extends State<MyApp> {
         //"/payment": (context) => PaymentPage(orderItems: [],),
         "/trackOrder": (context) => TrackOrder(),
         "/account": (context) => ProfilePage(),
-        "/signIn": (context) => SignInPage(), 
-        "/signUp": (context) => SignUpPage(), 
-        "/changePw": (context) => ChangePassword(), 
-        "/languages" : (context) => Languages(),
+        "/signIn": (context) => SignInPage(),
+        "/signUp": (context) => SignUpPage(),
+        "/changePw": (context) => ChangePassword(),
+        "/languages": (context) => Languages(),
       },
     );
   }

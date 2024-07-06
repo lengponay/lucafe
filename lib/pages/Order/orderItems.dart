@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -5,12 +7,13 @@ import 'package:google_fonts/google_fonts.dart';
 class OrderItems extends StatefulWidget {
   final String name;
   final String price;
-  final String image;
+  final String image; // Image path for the item
   final int quantity;
   final ValueChanged<int> onQuantityChanged;
   final VoidCallback onDelete;
 
-  OrderItems({
+  const OrderItems({
+    //*orderItems functions
     required this.name,
     required this.price,
     required this.image,
@@ -67,6 +70,7 @@ class _OrderItemsState extends State<OrderItems> {
           motion: ScrollMotion(),
           children: [
             SlidableAction(
+              borderRadius: BorderRadius.circular(12),
               onPressed: (context) => widget.onDelete(),
               backgroundColor: Color(0xFFFE4A49),
               foregroundColor: Colors.white,
@@ -92,7 +96,7 @@ class _OrderItemsState extends State<OrderItems> {
                   width: 110,
                   height: 120,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(12),
                     color: Colors.black12,
                     boxShadow: [
                       BoxShadow(
@@ -104,14 +108,13 @@ class _OrderItemsState extends State<OrderItems> {
                     ],
                   ),
                   child: Image.asset(
-                    "lib/images/drinks/${widget.image}.png",
-                    width: 110,
+                    widget.image, //* Modified
                     height: 100,
                   ),
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 15.0, top: 2.0),
+                    padding: const EdgeInsets.only(left: 5.0, top: 2.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
