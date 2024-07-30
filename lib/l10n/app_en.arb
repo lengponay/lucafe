@@ -36,7 +36,7 @@
   "@seeMore": {
     "description": "The 5 language"
   },
-  "coldCoffee": "Cold-Coffee",
+  "coldCoffee": "Cold Coffee",
   "@coldCoffee": {
     "description": "The 5 language"
   },
@@ -360,7 +360,7 @@
   "@notHaveAnAccount": {
     "description": "The 5 language"
   },
-  "signIn": "SignIn",
+  "signIn": "Sign In",
   "@signIn": {
     "description": "The 5 language"
   },

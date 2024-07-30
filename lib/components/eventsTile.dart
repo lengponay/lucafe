@@ -26,7 +26,7 @@ class _EventsTileState extends State<EventsTile> with AutomaticKeepAliveClientMi
   void initState() {
     super.initState();
     _pageController = PageController();
-    Timer.periodic(Duration(seconds: 1), (Timer timer) {
+    Timer.periodic(Duration(milliseconds: 500), (Timer timer) { 
       if (_currentPage < events.length - 1) {
         _currentPage++;
       } else {
@@ -35,7 +35,7 @@ class _EventsTileState extends State<EventsTile> with AutomaticKeepAliveClientMi
 
       _pageController.animateToPage(
         _currentPage,
-        duration: Duration(milliseconds: 10000),
+        duration: Duration(milliseconds: 50), 
         curve: Curves.easeIn,
       );
     });

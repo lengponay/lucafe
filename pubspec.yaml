@@ -49,6 +49,7 @@ dependencies:
   provider: ^6.1.2
   gradients: ^0.1.1+2
   smooth_page_indicator: ^1.1.0
+  awesome_dialog: ^3.2.1
 
 dev_dependencies:
   flutter_test:
