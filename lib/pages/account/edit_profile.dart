@@ -4,8 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
+
 import '../accountWidget/editItem.dart';
 import '../accountWidget/textFieldWithStyle.dart';
+
+
 // import 'package:western/components/my_textfield.dart';
 // import 'package:western/widgets/editItem.dart';
 // import 'package:western/widgets/textFieldWtihStyle.dart';
@@ -68,7 +72,7 @@ class _EditProfileState extends State<EditProfile> {
                       Padding(
                         padding: const EdgeInsets.only(right : 10.0),
                         child: Text(
-                          "Account",
+                          AppLocalizations.of(context)!.account,
                           style: GoogleFonts.assistant(
                             textStyle: TextStyle(
                               fontSize: 30,
@@ -82,7 +86,7 @@ class _EditProfileState extends State<EditProfile> {
                   ),
                   const SizedBox(height: 40),
                   EditItem(
-                    title: "Photo",
+                    title: AppLocalizations.of(context)!.phoneNumber,///// photo
                     widget: Column(
                       children: [
                         SizedBox(height: 20),
@@ -136,7 +140,8 @@ class _EditProfileState extends State<EditProfile> {
                                 Color.fromARGB(255, 90, 146, 210),
                           ),
                           child: Text(
-                            "Upload Image",
+                            ///// not yet translate
+                            AppLocalizations.of(context)!.upLoadPhoto,
                             style: GoogleFonts.nunito(
                               textStyle: TextStyle(
                                 color: Colors.white,
@@ -151,22 +156,22 @@ class _EditProfileState extends State<EditProfile> {
                   SizedBox(height: 20),
                   EditItem(
                     widget: textFieldWithStyle(
-                      hintText: "First Name",
+                      hintText: AppLocalizations.of(context)!.firstName,
                       lastName: _firstName,
                     ),
-                    title: " First Name",
+                    title: AppLocalizations.of(context)!.firstName,
                   ),
                   const SizedBox(height: 40),
                   EditItem(
                     widget: textFieldWithStyle(
-                      hintText: "Last Name",
+                      hintText: AppLocalizations.of(context)!.lastName,
                       lastName: _lastName,
                     ),
-                    title: " Last Name",
+                    title: AppLocalizations.of(context)!.lastName,
                   ),
                   const SizedBox(height: 40),
                   EditItem(
-                    title: "Gender",
+                    title: AppLocalizations.of(context)!.gender,
                     widget: Row(
                       children: [
                         IconButton(
@@ -213,26 +218,26 @@ class _EditProfileState extends State<EditProfile> {
                   const SizedBox(height: 40),
                   EditItem(
                     widget: textFieldWithStyle(
-                      hintText: "Age",
+                      hintText: AppLocalizations.of(context)!.age,/////// age
                       lastName: _age,
                     ),
-                    title: "Age",
+                    title: AppLocalizations.of(context)!.age, ///// age
                   ),
                   const SizedBox(height: 40),
                   EditItem(
                     widget: textFieldWithStyle(
-                      hintText: "Email",
+                      hintText: AppLocalizations.of(context)!.email,
                       lastName: _email,
                     ),
-                    title: "Email",
+                    title: AppLocalizations.of(context)!.email,
                   ),
                   const SizedBox(height: 40),
                   EditItem(
                     widget: textFieldWithStyle(
-                      hintText: "Phone Number",
+                      hintText: AppLocalizations.of(context)!.phoneNumber,
                       lastName: _contact,
                     ),
-                    title: "Phone Number",
+                    title: AppLocalizations.of(context)!.phoneNumber,
                   ),
                   const SizedBox(height: 40),
                   Row(
@@ -257,7 +262,7 @@ class _EditProfileState extends State<EditProfile> {
                         ),
                         child:
                          Text(
-                          "Save",
+                          AppLocalizations.of(context)!.save,
                           style: TextStyle(
                             color: Color.fromARGB(255, 90, 146, 210),
                             fontWeight: FontWeight.w500,

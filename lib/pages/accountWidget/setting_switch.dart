@@ -2,8 +2,6 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-// import 'package:ionicons/ionicons.dart';
-// import 'package:western/widgets/forwardButton.dart';
 
 class SettingSwitch extends StatelessWidget {
   final String title;

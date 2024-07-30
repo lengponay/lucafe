@@ -22,7 +22,7 @@ class chooseLanguage extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: 30,
-          backgroundImage: AssetImage(flag),
+          foregroundImage: AssetImage(flag),
         ),
         SizedBox(width: 20),
         Text(

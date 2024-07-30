@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
+
 
 class OrderItems extends StatefulWidget {
   final String name;
@@ -75,7 +77,7 @@ class _OrderItemsState extends State<OrderItems> {
               backgroundColor: Color(0xFFFE4A49),
               foregroundColor: Colors.white,
               icon: Icons.delete,
-              label: 'Delete',
+              label: AppLocalizations.of(context)!.delete,
             ),
           ],
         ),

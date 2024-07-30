@@ -183,4 +183,3 @@ class Detail {
     required this.price,
   });
 }
-

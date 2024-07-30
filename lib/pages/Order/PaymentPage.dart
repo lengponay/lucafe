@@ -1,7 +1,10 @@
 
+// ignore_for_file: prefer_const_constructors, library_private_types_in_public_api, sort_child_properties_last
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:western/pages/Order/trackOrder.dart';
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
 
 class PaymentPage extends StatefulWidget {
   final List<Map<String, dynamic>> orderItems;
@@ -60,7 +63,7 @@ class _PaymentPageState extends State<PaymentPage> {
           title: Container(
             padding: EdgeInsets.only(left: 4),
             child: Text(
-              "Confirm Order",
+              AppLocalizations.of(context)!.confirmOrder,
               style: GoogleFonts.assistant(
                 color: Colors.white,
                 fontSize: 25,
@@ -86,7 +89,7 @@ class _PaymentPageState extends State<PaymentPage> {
                 Container(
                   padding: EdgeInsets.only(left: 5),
                   child: Text(
-                    "Your Bill Summary",
+                    AppLocalizations.of(context)!.yourBillSummary,
                     style: GoogleFonts.assistant(
                       fontSize: 20,
                       color: Colors.white,
@@ -137,7 +140,7 @@ class _PaymentPageState extends State<PaymentPage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Subtotal",
+                              AppLocalizations.of(context)!.subTotal,
                               style: GoogleFonts.assistant(
                                 fontSize: 16,
                               ),
@@ -155,7 +158,7 @@ class _PaymentPageState extends State<PaymentPage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Discount",
+                              AppLocalizations.of(context)!.discount,
                               style: GoogleFonts.assistant(
                                 fontSize: 16,
                               ),
@@ -177,7 +180,7 @@ class _PaymentPageState extends State<PaymentPage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Total",
+                              AppLocalizations.of(context)!.total,
                               style: GoogleFonts.assistant(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
@@ -200,7 +203,7 @@ class _PaymentPageState extends State<PaymentPage> {
                 Container(
                   padding: EdgeInsets.only(left: 7),
                   child: Text(
-                    "Payment Method",
+                    AppLocalizations.of(context)!.paymentMethod,
                     style: GoogleFonts.assistant(
                       color: Colors.white,
                       fontSize: 20,
@@ -231,7 +234,7 @@ class _PaymentPageState extends State<PaymentPage> {
                             ),
                             SizedBox(width: 5),
                             Text(
-                              "Cash Payment",
+                              AppLocalizations.of(context)!.cashPayment,
                               style: GoogleFonts.assistant(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w500,
@@ -267,7 +270,7 @@ class _PaymentPageState extends State<PaymentPage> {
                             ),
                             SizedBox(width: 5),
                             Text(
-                              "Credit Card / Acleda Bank",
+                              AppLocalizations.of(context)!.creditCardOrBank,
                               style: GoogleFonts.assistant(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w500,
@@ -328,7 +331,7 @@ class _PaymentPageState extends State<PaymentPage> {
                             SizedBox(width: 5),
                             Flexible(
                               child: Text(
-                                " Pick Up At LU Coffee",
+                                AppLocalizations.of(context)!.pickUpAtLUCoffee,
                                 style: GoogleFonts.assistant(
                                   fontSize: 18,
                                   fontWeight: FontWeight.w500,
@@ -367,7 +370,7 @@ class _PaymentPageState extends State<PaymentPage> {
                             ),
                           ),
                           child: Text(
-                            'Place Order',
+                            AppLocalizations.of(context)!.placeOrder,
                             style: GoogleFonts.assistant(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,

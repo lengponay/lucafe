@@ -3,7 +3,7 @@
 // import 'package:flutter/cupertino.dart';
 // import 'package:western/widgets/radio_switch_incre_decre.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
 import 'radio_switch_incre_decre2.dart';
 // import 'package:western/widgets/navBar.dart';
 
@@ -42,7 +42,7 @@ class _ItemsWidget5State extends State<ItemsWidget5> {
   }
 
   // List of item names
- final List<String> itemNames = [
+  final List<String> itemNames = [
     "Item 1",
     "Item 2",
     "Item 3",
@@ -60,11 +60,11 @@ class _ItemsWidget5State extends State<ItemsWidget5> {
     "15",
     "16",
     "17",
-    "Olatte",
-    "Sprite",
-    "Pepsi",
-    "Coke",
-    "22",
+    "olatte",
+    "sprite",
+    "pepsi",
+    "coke",
+    "age",
   ];
 
   final List<String> description = [
@@ -85,10 +85,10 @@ class _ItemsWidget5State extends State<ItemsWidget5> {
     "15",
     "16",
     "17",
-    "Special Olatte, plus the vitamins inside",
-    "Sprite, boost your mood and happy with sprite",
-    "With Pepsi, everything is yummy and fun",
-    "Coke, Make your food more delicious and more enjoyable",
+    "specialOlattePlusTheVitaminsInside",
+    "spriteBoostYourMoodAndHapptWithSprite",
+    "withPepsiEverythingIsYummyAndFun",
+    "cokeMakerYourFoodMoreDeliciousAndMoreEnjoyable",
     "22",
   ];
 
@@ -119,6 +119,60 @@ class _ItemsWidget5State extends State<ItemsWidget5> {
 
   @override
   Widget build(BuildContext context) {
+    final AppLocalizations localizations = AppLocalizations.of(context)!;
+
+    final Map<String, String> localizedItemNames = {
+      "Item 1": localizations.age, // just add it for forloop
+      "Item 2": localizations.age, // just add it for forloop
+      "Item 3": localizations.age, // just add it for forloop
+      "Item 4": localizations.age, // just add it for forloop
+      "Item 5": localizations.age, // just add it for forloop
+      "Item 6": localizations.age, // just add it for forloop
+      "Item 7": localizations.age, // just add it for forloop
+      "Item 8": localizations.age, // just add it for forloop
+      "Item 9": localizations.age, // just add it for forloop
+      "Item 10": localizations.age, // just add it for forloop
+      "Item 11": localizations.age, // just add it for forloop
+      "Item 12": localizations.age, // just add it for forloop
+      "13": localizations.age, // just add it for forloop
+      "14": localizations.age, // just add it for forloop
+      "15": localizations.age, // just add it for forloop
+      "16": localizations.age, // just add it for forloop
+      "17": localizations.age,
+      "olatte": localizations.olatte,
+      "sprite": localizations.sprite,
+      "pepsi": localizations.pepsi,
+      "coke": localizations.coke,
+      "age": localizations.age,
+    };
+    final Map<String, String> localizedDescription = {
+      "Item 1": localizations.age,
+      "Item 2": localizations.age,
+      "Item 3": localizations.age,
+      "Item 4": localizations.age,
+      "Item 5": localizations.age,
+      "Item 6": localizations.age,
+      "Item 7": localizations.age,
+      "Item 8": localizations.age,
+      "Item 9": localizations.age,
+      "Item 10": localizations.age,
+      "Item 11": localizations.age,
+      "Item 12": localizations.age,
+      "13": localizations.age,
+      "14": localizations.age,
+      "15": localizations.age,
+      "16": localizations.age,
+      "17": localizations.age,
+      "specialOlattePlusTheVitaminsInside":
+          localizations.specialOlattePlusTheVitaminsInside,
+      "spriteBoostYourMoodAndHapptWithSprite":
+          localizations.spriteBoostYourMoodAndHapptWithSprite,
+      "withPepsiEverythingIsYummyAndFun":
+          localizations.withPepsiEverythingIsYummyAndFun,
+      "cokeMakerYourFoodMoreDeliciousAndMoreEnjoyable":
+          localizations.cokeMakerYourFoodMoreDeliciousAndMoreEnjoyable,
+      "22": localizations.age,
+    };
     return GridView.count(
       crossAxisCount: 2,
       shrinkWrap: true,
@@ -162,7 +216,7 @@ class _ItemsWidget5State extends State<ItemsWidget5> {
                   child: Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      itemNames[i],
+                      localizedItemNames[itemNames[i]]!,
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -174,7 +228,7 @@ class _ItemsWidget5State extends State<ItemsWidget5> {
                 Container(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    description[i],
+                    localizedDescription[description[i]]!,
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w200,

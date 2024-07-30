@@ -1,10 +1,10 @@
-
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unnecessary_string_interpolations, override_on_non_overriding_member
 
 // import 'package:flutter/cupertino.dart';
 import 'package:western/widgets/radio_switch_incre_decre.dart';
 import 'package:flutter/material.dart';
 // import 'package:western/widgets/navBar.dart';
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
 
 class ItemsWidget4 extends StatefulWidget {
   @override
@@ -42,7 +42,7 @@ class _ItemsWidget3State extends State<ItemsWidget4> {
 
   // List of item names
 
-final List<String> itemNames = [
+  final List<String> itemNames = [
     "Item 1",
     "Item 2",
     "Item 3",
@@ -53,14 +53,13 @@ final List<String> itemNames = [
     "88",
     "ee",
     "kk",
-    "Iced Chocolate",
-    "Bubble Tea",
-    "Olong Milktea",
+    "bubble Tea",
     "Ovaltine",
-
-    "Bubble Tea",
     "Olong Milktea",
-    "Ovaltine",
+    "icedChocolate",
+    "bubbleTea",
+    "olongMilktea",
+    "ovaltine",
     "Item 12",
     "Item 13",
     "Item 14"
@@ -77,13 +76,13 @@ final List<String> itemNames = [
     "ds 88",
     "ds ee",
     " ds kk",
-    "Refreshing chocolate served over ice",
-    "Tea with bubble inside, fresh",
+    "refreshingChocolateServedOverIce",
+    "teaWtihBubbleInsideFresh",
     "fr",
     "Refreshing chocolate served over ice",
-    "Tea with bubble inside, boosting your energy",
-    "Olong tea, make your day like tea",
-    "Ovaltine, boost your energy and refresh your day"
+    "teaWithBubbleInsiderBoostingYourEnergy",
+    "olongTeaMakeYourDayLikeTea",
+    "ovaltineBoostYourEnergyAndRefreshYourDay",
   ];
 
   final List<String> price = [
@@ -106,9 +105,55 @@ final List<String> itemNames = [
     "\$1.00"
   ];
 
-
   @override
   Widget build(BuildContext context) {
+    final AppLocalizations localizations = AppLocalizations.of(context)!;
+
+    final Map<String, String> localizedItemNames = {
+      "Item 1": localizations.age,
+      "Item 2": localizations.age,
+      "Item 3": localizations.age,
+      "Item 4": localizations.age,
+      "Item 5": localizations.age,
+      "Item 6": localizations.age,
+      "Item 7": localizations.age,
+      "88": localizations.age,
+      "ee": localizations.age,
+      "kk": localizations.age,
+      "bubble Tea": localizations.age,
+      "Ovaltine": localizations.age,
+      "Olong Milktea": localizations.age,
+      "icedChocolate": localizations.icedAmericano, ///// icechocolate
+      "bubbleTea": localizations.bubbletea,
+      "olongMilktea": localizations.olongMilkTea,
+      "ovaltine": localizations.ovaltine,
+      "Item 12": localizations.age,
+      "Item 13": localizations.age,
+      "Item 14": localizations.age,
+    };
+
+    final Map<String, String> localizedDescription = {
+      "Description 1": localizations.age,
+      "Description 2": localizations.age,
+      "Description 3": localizations.age,
+      "Description 4": localizations.age,
+      "Description 5": localizations.age,
+      "Description 6": localizations.age,
+      "Description 7": localizations.age,
+      "ds 88": localizations.age,
+      "ds ee": localizations.age,
+      " ds kk": localizations.age,
+      "refreshingChocolateServedOverIce": localizations.age,
+      "teaWtihBubbleInsideFresh": localizations.age,
+      "fr": localizations.age,
+      "Refreshing chocolate served over ice":
+          localizations.refreshingChocolateServedOverIce,
+      "teaWithBubbleInsiderBoostingYourEnergy":
+          localizations.teaWithBubbleInsiderBoostingYourEnergy,
+      "olongTeaMakeYourDayLikeTea": localizations.olongTeaMakeYourDayLikeTea,
+      "ovaltineBoostYourEnergyAndRefreshYourDay":
+          localizations.ovaltineBoostYourEnergyAndRefreshYourDay,
+    };
     return GridView.count(
       crossAxisCount: 2,
       shrinkWrap: true,
@@ -139,7 +184,7 @@ final List<String> itemNames = [
                     child: Container(
                       margin: EdgeInsets.all(10),
                       child: Image.asset(
-                       "lib/images/drinks/${i + 1}.png",
+                        "lib/images/drinks/${i + 1}.png",
                         width: 130,
                         height: 130,
                         fit: BoxFit.contain,
@@ -152,7 +197,7 @@ final List<String> itemNames = [
                   child: Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      itemNames[i],
+                      localizedItemNames[itemNames[i]]!,
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -164,7 +209,7 @@ final List<String> itemNames = [
                 Container(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    description[i],
+                    localizedDescription[description[i]]!,
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w200,
@@ -215,7 +260,7 @@ final List<String> itemNames = [
                         },
                         icon: const Icon(Icons.add),
                         style: IconButton.styleFrom(
-                          backgroundColor:Color.fromARGB(145, 200, 209, 225),
+                          backgroundColor: Color.fromARGB(145, 200, 209, 225),
                         ),
                       ),
                     ],

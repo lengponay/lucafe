@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 import 'radio_switch_incre_decre.dart';
 // import 'package:western/widgets/navBar.dart';
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
 
 class ItemsWidget2 extends StatefulWidget {
   @override
@@ -49,10 +50,10 @@ class _ItemsWidget2State extends State<ItemsWidget2> {
     "Item 5",
     "Item 6",
     "Item 7",
-    "Hot Latte",
-    "Hot Vanilla Latte",
-    "Hot Americano",
-    "Item 11"
+    "hotLatte",
+    "hotVanillaLatte",
+    "hotAmericano",
+    "Item 11",
   ];
 
   final List<String> description = [
@@ -63,10 +64,10 @@ class _ItemsWidget2State extends State<ItemsWidget2> {
     "Description 5",
     "Description 6",
     "Description 7",
-    "Espresso with steamed milk",
-    "steamed milk, Vanilla syrup",
-    "Espresso with hot water",
-    "Description 11"
+    "espressoWithSteamMilk",
+    "steamedMilkVanillaSyrup",
+    "espressoWithHotWater",
+    "Description 11",
   ];
 
   final List<String> price = [
@@ -85,6 +86,34 @@ class _ItemsWidget2State extends State<ItemsWidget2> {
 
   @override
   Widget build(BuildContext context) {
+    final AppLocalizations localizations = AppLocalizations.of(context)!;
+
+    final Map<String, String> localizedItemNames = {
+      "Item 1": localizations.age, // just add it for forloop
+      "Item 2": localizations.age, // just add it for forloop
+      "Item 3": localizations.age, // just add it for forloop
+      "Item 4": localizations.age, // just add it for forloop
+      "Item 5": localizations.age, // just add it for forloop
+      "Item 6": localizations.age, // just add it for forloop
+      "Item 7": localizations.age, // just add it for forloop
+      "hotLatte": localizations.hotLatte,
+      "hotVanillaLatte": localizations.hotVanillaLatte,
+      "hotAmericano": localizations.hotAmericano,
+      "Item 11": localizations.age,
+    };
+    final Map<String, String> localizedDescription = {
+      "Description 1": localizations.age,
+      "Description 2": localizations.age,
+      "Description 3": localizations.age,
+      "Description 4": localizations.age,
+      "Description 5": localizations.age,
+      "Description 6": localizations.age,
+      "Description 7": localizations.age,
+      "espressoWithSteamMilk": localizations.espressoWithSteamMilk,
+      "steamedMilkVanillaSyrup": localizations.steamedMilkVanillaSyrup,
+      "espressoWithHotWater": localizations.espressoWithHotWater,
+      "Description 11": localizations.age,
+    };
     return GridView.count(
       crossAxisCount: 2,
       shrinkWrap: true,
@@ -128,7 +157,7 @@ class _ItemsWidget2State extends State<ItemsWidget2> {
                   child: Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      itemNames[i],
+                      localizedItemNames[itemNames[i]]!,
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -140,7 +169,7 @@ class _ItemsWidget2State extends State<ItemsWidget2> {
                 Container(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    description[i],
+                    localizedDescription[description[i]]!,
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w200,
@@ -191,7 +220,7 @@ class _ItemsWidget2State extends State<ItemsWidget2> {
                         },
                         icon: const Icon(Icons.add),
                         style: IconButton.styleFrom(
-                          backgroundColor:Color.fromARGB(145, 200, 209, 225),
+                          backgroundColor: Color.fromARGB(145, 200, 209, 225),
                         ),
                       ),
                     ],

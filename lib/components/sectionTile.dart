@@ -8,7 +8,8 @@ class SectionTile extends StatefulWidget {
   State<SectionTile> createState() => _SectionTileState();
 }
 
-class _SectionTileState extends State<SectionTile> with AutomaticKeepAliveClientMixin {
+class _SectionTileState extends State<SectionTile>
+    with AutomaticKeepAliveClientMixin {
   double defaultPadding = 10.0;
   int _currentPage = 0;
   late PageController _pageController;

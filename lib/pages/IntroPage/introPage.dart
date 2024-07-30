@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
 import '../../components/my_button.dart';
 
 class IntroPage extends StatelessWidget {
@@ -35,7 +35,7 @@ class IntroPage extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(right:10 ),
                           child: Text(
-                                  "Welcome To\n LU Coffee",
+                                  AppLocalizations.of(context)!.welcometoLUCoffee,
                                   textAlign: TextAlign.center,
                                   style: GoogleFonts.assistant(
                                     fontSize: 48,
@@ -81,7 +81,7 @@ class IntroPage extends StatelessWidget {
           
                     // GET STARTED BUTTON
                     MyButton(
-                        text: "Get Started",
+                        text: AppLocalizations.of(context)!.getStarted,
                         onTap: () {
                           // Tap to the Sign in and Sign up pages
                           Navigator.pushNamed(context, "/signIn");

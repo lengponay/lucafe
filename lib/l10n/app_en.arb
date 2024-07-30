@@ -1,0 +1,619 @@
+{
+    
+  "welcometoLUCoffee": "Welcome to\n LU Coffee",
+  "@welcometoLUCoffee": {
+    "description": "A greeting"
+  },
+  "coffeeMakesEverythingBetter": "Coffee Makes Everything Better!!",
+  "@coffeeMakesEverythingBetter": {
+    "description": "A 2 greeting"
+  },
+  "getStarted": "Get Started",
+  "@getStarted": {
+    "description": "start button"
+  },
+  "hello": "Hello {username}",
+  "@hello": {
+    "placeholders": {
+      "username": {
+        "type": "String"
+      }
+    }
+  },
+  "whatDoYouWantToHaveToday": "What Do You Want To Have Today?",
+  "@whatDoYouWantToHaveToday": {
+    "description": "The 1 language"
+  },
+  "recommendedDrink": "Recommended Drink",
+  "@recommendedDrink": {
+    "description": "The 23 language"
+  },
+  "lifeUniversityFCEvents": "Life University & FC Events",
+  "@lifeUniversityFCEvents": {
+    "description": "The 4 language"
+  },
+  "seeMore": "See More",
+  "@seeMore": {
+    "description": "The 5 language"
+  },
+  "coldCoffee": "Cold-Coffee",
+  "@coldCoffee": {
+    "description": "The 5 language"
+  },
+  "hotCoffee": "Hot Coffee",
+  "@hotCoffee": {
+    "description": "The 5 language"
+  },
+  "tea": "Tea",
+  "@tea": {
+    "description": "The 5 language"
+  },
+  "milkTea": "Milk Tea",
+  "@milkTea": {
+    "description": "The 5 language"
+  },
+  "softDrink": "Soft drink",
+  "@softDrink": {
+    "description": "The 5 language"
+  },
+  "icedCappucino": "Iced Cappucino",
+  "@icedCappucino": {
+    "description": "The 5 language"
+  },
+  "icedLatte": "Iced Latte",
+  "@icedLatte": {
+    "description": "The 5 language"
+  },
+  "icedAmericano": "Iced Americano",
+  "@icedAmericano": {
+    "description": "The 5 language"
+  },
+  "icedMocha": "Iced Mocha",
+  "@icedMocha": {
+    "description": "The 5 language"
+  },
+  "icedVanillaLatte": "Iced Vanilla Latte",
+  "@icedVanillaLatte": {
+    "description": "The 5 language"
+  },
+  "icedCaramel": "Iced Caramel",
+  "@icedCaramel": {
+    "description": "The 5 language"
+  },
+  "hazelnutLatte": "Hazelnut Latte",
+  "@hazelnutLatte": {
+    "description": "The 5 language"
+  },
+  "hotLatte": "Hot Latte",
+  "@hotLatte": {
+    "description": "The 5 language"
+  },
+  "hotVanillaLatte": "Hot Vanilla Latte",
+  "@hotVanillaLatte": {
+    "description": "The 5 language"
+  },
+  "hotAmericano": "Hot Americano",
+  "@hotAmericano": {
+    "description": "The 5 language"
+  },
+  "icedGreenTea": "Iced Green Tea",
+  "@icedGreenTea": {
+    "description": "The 5 language"
+  },
+  "passionTea": "Passion Tea",
+  "@passionTea": {
+    "description": "The 5 language"
+  },
+  "olongTea": "Olong Tea",
+  "@olongTea": {
+    "description": "The 5 language"
+  },
+  "ovaltine": "Ovaltine",
+  "@ovaltine": {
+    "description": "The 5 language"
+  },
+  "bubbletea": "Bubble Tea",
+  "@bubbletea": {
+    "description": "The 5 language"
+  },
+  "olongMilkTea": "Olong Milk Tea",
+  "@olongMilkTea": {
+    "description": "The 5 language"
+  },
+  "olatte": "Olatte",
+  "@olatte": {
+    "description": "The 5 language"
+  },
+  "sprite": "Sprite",
+  "@sprite": {
+    "description": "The 5 language"
+  },
+  "pepsi": "Pepsi",
+  "@pepsi": {
+    "description": "The 5 language"
+  },
+  "coke": "Coke",
+  "@coke": {
+    "description": "The 5 language"
+  },
+  "openFromSevenAMtoFivePM": "Open From 7am to 5pm",
+  "@openFromSevenAMtoFivePM": {
+    "description": "The 5 language"
+  },
+  "selfPickUpAtTheLUCoffee": "Self Pick-up at the LU Coffee",
+  "@selfPickUpAtTheLUCoffee": {
+    "description": "The 5 language"
+  },
+  "orderSummary": "Order Summary",
+  "@orderSummary": {
+    "description": "The 5 language"
+  },
+  "yourOrderSummary": "Your Order Summary",
+  "@yourOrderSummary": {
+    "description": "The 5 language"
+  },
+  "applyCoupon": "Apply Coupon",
+  "@applyCoupon": {
+    "description": "The 5 language"
+  },
+  "billSummary": "Bill Summary",
+  "@billSummary": {
+    "description": "The 5 language"
+  },
+  "subTotal": "SubTotal",
+  "@subTotal": {
+    "description": "The 5 language"
+  },
+  "discount": "Discount",
+  "@discount": {
+    "description": "The 5 language"
+  },
+  "total": "Total",
+  "@total": {
+    "description": "The 5 language"
+  },
+  "confirmOrder": "Confirm Order",
+  "@confirmOrder": {
+    "description": "The 5 language"
+  },
+  "paymentMethod": "Payment Method",
+  "@paymentMethod": {
+    "description": "The 5 language"
+  },
+  "cashPayment": "Cash Payment",
+  "@cashPayment": {
+    "description": "The 5 language"
+  },
+  "creditCardOrBank": "Credit Card or Bank",
+  "@creditCardOrBank": {
+    "description": "The 5 language"
+  },
+  "pickUpAtLUCoffee": "Pick up at LU Coffee",
+  "@pickUpAtLUCoffee": {
+    "description": "The 5 language"
+  },
+  "placeOrder": "Place Order",
+  "@placeOrder": {
+    "description": "The 5 language"
+  },
+  "trackingOrder": "Tracking Order",
+  "@trackingOrder": {
+    "description": "The 5 language"
+  },
+  "orderNumber": "Order Number",
+  "@orderNumber": {
+    "description": "The 5 language"
+  },
+  "estimatePreparingTime": "Estimate Preparing Time",
+  "@estimatePreparingTime": {
+    "description": "The 5 language"
+  },
+  "confirmPickUp": "Confirm Pick up",
+  "@confirmPickUp": {
+    "description": "The 5 language"
+  },
+  "orderServed": "Order Served",
+  "@orderServed": {
+    "description": "The 5 language"
+  },
+  "profile": "profile",
+  "@profile": {
+    "description": "The 5 language"
+  },
+  "account": "Account",
+  "@account": {
+    "description": "The 5 language"
+  },
+  "language": "Language",
+  "@language": {
+    "description": "The 5 language"
+  },
+  "notifications": "Notification",
+  "@notifications": {
+    "description": "The 5 language"
+  },
+  "darkMode": "Dark Mode",
+  "@darkMode": {
+    "description": "The 5 language"
+  },
+  "changePassword": "Change Password",
+  "@changePassword": {
+    "description": "The 5 language"
+  },
+  "logOut": "Log Out",
+  "@logOut": {
+    "description": "The 5 language"
+  },
+  "addToCart": "Add to Cart",
+  "@addToCart": {
+    "description": "The 5 language"
+  },
+  "currentPassword": "Current Password",
+  "@currentPassword": {
+    "description": "The 5 language"
+  },
+  "newPassword": "New Password",
+  "@newPassword": {
+    "description": "The 5 language"
+  },
+  "confirmPassword": "Confirm Password",
+  "@confirmPassword": {
+    "description": "The 5 language"
+  },
+  "submit": "Submit",
+  "@submit": {
+    "description": "The 5 language"
+  },
+  "deleteAccount": "Delete Account",
+  "@deleteAccount": {
+    "description": "The 5 language"
+  },
+  "editProfile": "Edit Profile",
+  "@editProfile": {
+    "description": "The 5 language"
+  },
+  "setting": "Setting",
+  "@setting": {
+    "description": "The 5 language"
+  },
+  "save": "Save",
+  "@save": {
+    "description": "The 5 language"
+  },
+  "phoneNumber": "Phone Number",
+  "@phoneNumber": {
+    "description": "The 5 language"
+  },
+  "gender": "Gender",
+  "@gender": {
+    "description": "The 5 language"
+  },
+  "lastName": "Last Name",
+  "@lastName": {
+    "description": "The 5 language"
+  },
+  "firstName": "First Name",
+  "@firstName": {
+    "description": "The 5 language"
+  },
+  "upLoadPhoto": "UpLoad Photo",
+  "@upLoadPhoto": {
+    "description": "The 5 language"
+  },
+  "email": "Email",
+  "@email": {
+    "description": "The 5 language"
+  },
+  "areYouSureToLogOut": "Are you sure to Log out?",
+  "@areYouSureToLogOut": {
+    "description": "The 5 language"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "The 5 language"
+  },
+  "verifyPasswordIsIncorrect": "Verify Password is incorrect",
+  "@verifyPasswordIsIncorrect": {
+    "description": "The 5 language"
+  },
+  "mustBeAtLeastEightCharacters": "Must be at least 8 characters",
+  "@mustBeAtLeastEightCharacters": {
+    "description": "The 5 language"
+  },
+  "yourPasswordIsNotConfirm": "Your password is not confirm",
+  "@yourPasswordIsNotConfirm": {
+    "description": "The 5 language"
+  },
+  "verifyPassword": "verifyPassword",
+  "@verifyPassword": {
+    "description": "The 5 language"
+  },
+  "success": "Success",
+  "@success": {
+    "description": "The 5 language"
+  },
+  "photo": "Photo",
+  "@photo": {
+    "description": "The 5 language"
+  },
+  "uploadImage": "Upload Image",
+  "@uploadImage": {
+    "description": "The 5 language"
+  },
+  "age": "Age",
+  "@age": {
+    "description": "The 5 language"
+  },
+  "menu": "Menu",
+  "@menu": {
+    "description": "The 5 language"
+  },
+  "rating": "Rating 9.5 / 10",
+  "@rating": {
+    "description": "The 5 langurating"
+  },
+  "registerNow": "Register Now",
+  "@registerNow": {
+    "description": "The 5 language"
+  },
+  "notHaveAnAccount": "Not have an account? ",
+  "@notHaveAnAccount": {
+    "description": "The 5 language"
+  },
+  "signIn": "SignIn",
+  "@signIn": {
+    "description": "The 5 language"
+  },
+  "orContinueWith": "Or Continue With",
+  "@orContinueWith": {
+    "description": "The 5 language"
+  },
+  "username": "Username",
+  "@username": {
+    "description": "The 5 language"
+  },
+  "forgotPassword": "forgot Password",
+  "@forgotPassword": {
+    "description": "The 5 language"
+  },
+  "password": "Password",
+  "@password": {
+    "description": "The 5 language"
+  },
+  "signUp": "Sign Up",
+  "@signUp": {
+    "description": "The 5 language"
+  },
+  "emailAddressOrPhoneNumber": "Email Address or Phone Number",
+  "@emailAddressOrPhoneNumber": {
+    "description": "The 5 language"
+  },
+  "alreadyHaveAccount": "Already Have Account?",
+  "@alreadyHaveAccount": {
+    "description": "The 5 language"
+  },
+  "normalSugar": "Normal Sugar",
+  "@normalSugar": {
+    "description": "The 5 language"
+  },
+  "lessSugar": "Less Sugar",
+  "@lessSugar": {
+    "description": "The 5 language"
+  },
+  "moreSugar": "More Sugar",
+  "@moreSugar": {
+    "description": "The 5 language"
+  },
+  "noSugar": "No Sugar",
+  "@noSugar": {
+    "description": "The 5 language"
+  },
+  "equalPartsEspressoSteamMilkAndMilkFaom": "Equal parts espresso, steamed milk, and milk foam",
+  "@equalPartsEspressoSteamMilkAndMilkFaom": {
+    "description": "The 5 language"
+  },
+  "espressoWithChilledMilkOverIce": "Espresso with chilled milk over ice",
+  "@espressoWithChilledMilkOverIce": {
+    "description": "The 5 language"
+  },
+  "espressonDilutedWithHotWaterForASmoothTaste": "Espresso diluted with hot water for a smooth taste",
+  "@espressonDilutedWithHotWaterForASmoothTaste": {
+    "description": "The 5 language"
+  },
+  "espressoMixedWtihSteamedMilkAndChoco": "Espresso mixed with steamed milk and choco",
+  "@espressoMixedWtihSteamedMilkAndChoco": {
+    "description": "The 5 language"
+  },
+  "espresonWithSteamedMilkAndVanillaSyrup": "Espresso with steamed milk and vanilla syrup",
+  "@espresonWithSteamedMilkAndVanillaSyrup": {
+    "description": "The 5 language"
+  },
+  "espressoWithSteamMilkAndSyrup": "Espresso with steamed milk and syrup",
+  "@espressoWithSteamMilkAndSyrup": {
+    "description": "The 5 language"
+  },
+  "espressonWithSteamedMilkAndHazenutSyrup": "Espresso with steamed milk and hazelnut syrup",
+  "@espressonWithSteamedMilkAndHazenutSyrup": {
+    "description": "The 5 language"
+  },
+  "espressoWithSteamMilk": "Espresso with steamed milk",
+  "@espressoWithSteamMilk": {
+    "description": "The 5 language"
+  },
+  "steamedMilkVanillaSyrup": "steamed milk, Vanilla syrup",
+  "@steamed milk, Vanilla syrup": {
+    "description": "The 5 language"
+  },
+  "espressoWithHotWater": "Espresso with hot water",
+  "@espressoWithHotWater": {
+    "description": "The 5 language"
+  },
+  "refreshingGreenTeaServedOverIce": "Refreshing green tea served over ice",
+  "@refreshingGreenTeaServedOverIce": {
+    "description": "The 5 language"
+  },
+  "aVibrantTropicalBlendOfHibiscusAndFruitFlavor": "A vibrant, tropical blend of hibiscus and fruit flavors",
+  "@aVibrantTropicalBlendOfHibiscusAndFruitFlavor": {
+    "description": "The 5 language"
+  },
+  "smoothOlongTeaToppedWithACreamyMilkFoam": "Smooth oolong tea topped with a creamy milk foam",
+  "@smoothOlongTeaToppedWithACreamyMilkFoam": {
+    "description": "The 5 language"
+  },
+  "refreshingChocolateServedOverIce": "Refreshing chocolate served over ice",
+  "@refreshingChocolateServedOverIce": {
+    "description": "The 5 language"
+  },
+  "teaWtihBubbleInsideFresh": "Tea with bubble inside, fresh",
+  "@teaWtihBubbleInsideFresh": {
+    "description": "The 5 language"
+  },
+  "fr": "fr",
+  "@fr": {
+    "description": "The 5 language"
+  },
+  "teaWithBubbleInsiderBoostingYourEnergy": "Tea with bubble inside, boosting your energy",
+  "@teaWithBubbleInsiderBoostingYourEnergy": {
+    "description": "The 5 language"
+  },
+  "olongTeaMakeYourDayLikeTea": "Olong tea, make your day like tea",
+  "@olongTeaMakeYourDayLikeTea": {
+    "description": "The 5 language"
+  },
+  "ovaltineBoostYourEnergyAndRefreshYourDay": "Ovaltine, boost your energy and refresh your day",
+  "@ovaltineBoostYourEnergyAndRefreshYourDay": {
+    "description": "The 5 language"
+  },
+  "specialOlattePlusTheVitaminsInside": "Special Olatte, plus the vitamins inside",
+  "@specialOlattePlusTheVitaminsInside": {
+    "description": "The 5 language"
+  },
+  "spriteBoostYourMoodAndHapptWithSprite": "Sprite, boost your mood and happy with sprite",
+  "@spriteBoostYourMoodAndHapptWithSprite": {
+    "description": "The 5 language"
+  },
+  "withPepsiEverythingIsYummyAndFun": "With Pepsi, everything is yummy and fun",
+  "@withPepsiEverythingIsYummyAndFun": {
+    "description": "The 5 language"
+  },
+  "cokeMakerYourFoodMoreDeliciousAndMoreEnjoyable": "Coke, Make your food more delicious and more enjoyable",
+  "@cokeMakerYourFoodMoreDeliciousAndMoreEnjoyable": {
+    "description": "The 5 language"
+  },
+  "remarkYourWordhereEgSugar70": "Remark your words here. e.g : sugar 70%",
+  "@remarkYourWordhereEgSugar70": {
+    "description": "The 5 language"
+  },
+  "delete": "Delete",
+  "@delete": {
+    "description": "The 5 language"
+  },
+  "yourBillSummary": "Your Bill Summary",
+  "@yourBillSummary": {
+    "description": "The 5 language"
+  },
+  "yourOrderHasAlreadyBeenServedThankYou": "Your order has been served. Thank you :)",
+  "@yourOrderHasAlreadyBeenServedThankYou": {
+    "description": "The 5 language"
+  },
+  "backToHome": "Back To Home",
+  "@backToHome": {
+    "description": "The 5 language"
+  },
+  "orderCode": "Order Number: #168168",
+  "@orderCode": {
+    "description": "The 5 language"
+  },
+  "fiveToTenMins": "5 - 10 mins",
+  "@fiveToTenMins": {
+    "description": "The 5 language"
+  },
+  "status": "Status",
+  "@status": {
+    "description": "The 5 language"
+  },
+  "luCoffee": "LU Coffee",
+  "@luCoffee": {
+    "description": "The 5 language"
+  },
+  "ninePointFiveOneHundredRating": "9.5 (100+ ratings)",
+  "@ninePointFiveOneHundredRating": {
+    "description": "The 5 language"
+  },
+  "eightAM": "8:00 AM",
+  "@eightAM": {
+    "description": "The 5 language"
+  },
+  "orderPlaced": "Order Placed",
+  "@orderPlaced": {
+    "description": "The 5 language"
+  },
+  "yourOrderCodeWasPlacedForDelivery": "Your order #12345 was placed for delivery.",
+  "@yourOrderCodeWasPlacedForDelivery": {
+    "description": "The 5 language"
+  },
+  "eightFifteen": "8:15 AM",
+  "@eightFifteen": {
+    "description": "The 5 language"
+  },
+  "pending": "Pending",
+  "@pending": {
+    "description": "The 5 language"
+  },
+  "yourOrderIsPendingForConfirmation": "Your order is pending for confirmation.",
+  "@yourOrderIsPendingForConfirmation": {
+    "description": "The 5 language"
+  },
+  "eightThirty": "8:30 AM",
+  "@eightThirty": {
+    "description": "The 5 language"
+  },
+  "confirmed": "Confirmed",
+  "@confirmed": {
+    "description": "The 5 language"
+  },
+  "yourOrderIsConfirmedAndWillBeReadySoon": "Your order is confirmed and will be ready soon.",
+  "@yourOrderIsConfirmedAndWillBeReadySoon": {
+    "description": "The 5 language"
+  },
+  "eightFortyFive": "8:45 AM",
+  "@eightFortyFive": {
+    "description": "The 5 language"
+  },
+  "processing": "Processing",
+  "@processing": {
+    "description": "The 5 language"
+  },
+  "yourProductIsReadyForPickedUp": "Your product is ready for picked up.",
+  "@yourProductIsReadyForPickedUp": {
+    "description": "The 5 language"
+  },
+  "nineAM": "9:00 AM",
+  "@nineAM": {
+    "description": "The 5 language"
+  },
+  "delivered": "Delivered",
+  "@delivered": {
+    "description": "The 5 language"
+  },
+  "productDeliveredToYouAndMarkedAsDelivered": "Product delivered to you and marked as delivered.",
+  "@productDeliveredToYouAndMarkedAsDelivered": {
+    "description": "The 5 language"
+  },
+  "sugarLevel": "Sugar Level",
+  "@sugarLevel": {
+    "description": "The 5 language"
+  },
+  "optional": "Optional (+$0.00)",
+  "@optional": {
+    "description": "The 5 language"
+  },
+  "ok": "OK",
+  "@ok": {
+    "description": "The 5 language"
+  },
+  "successfullyAddedToCart": "Successfully added to cart",
+  "@successfullyAddedToCart": {
+    "description": "The 5 language"
+  }
+}

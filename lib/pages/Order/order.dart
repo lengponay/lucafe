@@ -10,7 +10,8 @@ import 'package:provider/provider.dart';
 // import 'package:provider/provider.dart';
 import 'package:western/pages/Order/order_provider.dart';
 
-import '../notificationPage.dart';
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
+import 'package:western/pages/notificationPage.dart';
 import 'PaymentPage.dart';
 import 'orderItems.dart';
 
@@ -82,7 +83,7 @@ class _OrderPageState extends State<OrderPage> {
           ),
           title: Center(
             child: Text(
-              "Order Summary",
+              AppLocalizations.of(context)!.orderSummary,
               style: GoogleFonts.assistant(
                 color: Colors.white,
                 fontSize: appBarTitleSize,
@@ -133,7 +134,7 @@ class _OrderPageState extends State<OrderPage> {
                     Container(
                       padding: EdgeInsets.only(left: screenSize.width * 0.01),
                       child: Text(
-                        "Your order summary",
+                        AppLocalizations.of(context)!.yourOrderSummary,
                         style: GoogleFonts.assistant(
                           fontSize: fontSizeMedium,
                           color: Colors.white,
@@ -151,7 +152,7 @@ class _OrderPageState extends State<OrderPage> {
                           //* Item name,price,quantity at here
                           name: orderItems[i]['name'] ?? '',
                           price: orderItems[i]['price'] ?? 0.0,
-                          image: "lib/images/drinks/${i + 1}.png",
+                          image: "lib/images/drinks/${i+1}.png",
                           quantity: orderItems[i]['quantity'] ?? 1,
                           onQuantityChanged: (newQuantity) =>
                               updateQuantity(context, i, newQuantity),
@@ -190,8 +191,8 @@ class _OrderPageState extends State<OrderPage> {
                                     borderRadius: BorderRadius.circular(20.0),
                                     borderSide: BorderSide.none,
                                   ),
-                                  hintText:
-                                      "Remark your words here. e.g : sugar 70%",
+                                  hintText: AppLocalizations.of(context)!
+                                      .remarkYourWordhereEgSugar70,
                                   hintStyle: GoogleFonts.assistant(
                                     color: Color.fromARGB(255, 87, 82, 82),
                                   ),
@@ -255,7 +256,7 @@ class _OrderPageState extends State<OrderPage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Bill Summary",
+                            AppLocalizations.of(context)!.billSummary,
                             style: GoogleFonts.assistant(
                               fontSize: 18,
                               fontWeight: FontWeight.w600,
@@ -297,7 +298,7 @@ class _OrderPageState extends State<OrderPage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                "Subtotal",
+                                AppLocalizations.of(context)!.subTotal,
                                 style: GoogleFonts.assistant(
                                   fontSize: 16,
                                 ),
@@ -314,7 +315,7 @@ class _OrderPageState extends State<OrderPage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                "Discount",
+                                AppLocalizations.of(context)!.discount,
                                 style: GoogleFonts.assistant(
                                   fontSize: 16,
                                 ),
@@ -336,7 +337,7 @@ class _OrderPageState extends State<OrderPage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                "Total",
+                                AppLocalizations.of(context)!.total,
                                 style: GoogleFonts.assistant(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
@@ -391,7 +392,7 @@ class _OrderPageState extends State<OrderPage> {
                               ),
                               child: Text(
                                 overflow: TextOverflow.ellipsis,
-                                "Confirm Order",
+                                AppLocalizations.of(context)!.confirmOrder,
                                 style: GoogleFonts.assistant(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,

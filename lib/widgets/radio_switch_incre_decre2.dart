@@ -1,7 +1,10 @@
 
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:western/pages/Order/order_provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
 
 // import 'itemsWidget5.dart';
 
@@ -69,7 +72,7 @@ class _BottomSheetContentState extends State<BottomSheetContent2> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Optional (+\$0.00)",
+                    AppLocalizations.of(context)!.optional,
                     style: TextStyle(
                       fontSize: 14,
                       color: const Color.fromARGB(255, 114, 112, 112),
@@ -144,7 +147,7 @@ class _BottomSheetContentState extends State<BottomSheetContent2> {
                 backgroundColor: Color.fromARGB(255, 74, 140, 215),
               ),
               child: Text(
-                "Add to Cart",
+                AppLocalizations.of(context)!.addToCart,
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -186,7 +189,7 @@ class _BottomSheetContentState extends State<BottomSheetContent2> {
         backgroundColor: Colors.black54.withOpacity(0.6),
         insetPadding: EdgeInsets.only(top: 20),
         title: Text(
-          "Successfully added to cart",
+          AppLocalizations.of(context)!.successfullyAddedToCart,
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 18,
@@ -200,7 +203,7 @@ class _BottomSheetContentState extends State<BottomSheetContent2> {
               Navigator.pop(context);
             },
             child: Text(
-              "OK",
+              AppLocalizations.of(context)!.ok,
               style: TextStyle(
                 color: Colors.white,
               ),

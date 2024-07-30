@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:western/components/eventsTile.dart';
+import 'package:western/components/imageCarousel.dart';
+import 'package:western/components/sectionTile.dart';
 import 'dart:async';
-import '../components/eventsTile.dart';
-import '../components/imageCarousel.dart';
-import '../components/sectionTile.dart';
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -63,7 +64,7 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Hello, Oliva!",
+                          AppLocalizations.of(context)!.hello("Manika"),
                           style: GoogleFonts.assistant(
                             fontSize: screenSize.width * 0.07,
                             color: Color.fromARGB(255, 239, 239, 244),
@@ -83,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                     Text(
-                      "What do you want to have today?",
+                      AppLocalizations.of(context)!.whatDoYouWantToHaveToday,
                       style: GoogleFonts.assistant(
                         fontSize: screenSize.width * 0.04,
                         color: Color.fromARGB(255, 239, 239, 244),
@@ -112,7 +113,7 @@ class _HomePageState extends State<HomePage> {
                   child: Row(
                     children: [
                       Text(
-                        "Recommended Drinks",
+                        AppLocalizations.of(context)!.recommendedDrink,
                         style: GoogleFonts.assistant(
                           fontSize: screenSize.width * 0.06,
                           fontWeight: FontWeight.w500,
@@ -136,7 +137,7 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Life University & FC Events",
+                          AppLocalizations.of(context)!.lifeUniversityFCEvents,
                           style: GoogleFonts.assistant(
                             fontSize: screenSize.width * 0.06,
                             fontWeight: FontWeight.w500,
@@ -146,9 +147,9 @@ class _HomePageState extends State<HomePage> {
                         SizedBox(width: 5),
                         TextButton(
                           child: Text(
-                            "see more",
+                            AppLocalizations.of(context)!.seeMore,
                             style: TextStyle(
-                              fontSize: screenSize.width * 0.04,
+                              fontSize: screenSize.width * 0.035,
                               fontWeight: FontWeight.w400,
                               color: Color.fromARGB(255, 44, 25, 88),
                             ),

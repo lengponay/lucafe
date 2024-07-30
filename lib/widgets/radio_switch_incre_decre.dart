@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:western/pages/Order/order_provider.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
 import 'itemsWidget.dart';
 
 class BottomSheetContent extends StatefulWidget {
@@ -64,14 +64,14 @@ class _BottomSheetContentState extends State<BottomSheetContent> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Sugar Level",
+                    AppLocalizations.of(context)!.sugarLevel,
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Text(
-                    "Optional (+\$0.00)",
+                    AppLocalizations.of(context)!.optional,
                     style: TextStyle(
                       fontSize: 14,
                       color: const Color.fromARGB(255, 114, 112, 112),
@@ -81,7 +81,7 @@ class _BottomSheetContentState extends State<BottomSheetContent> {
               ),
               ListTile(
                 title: Text(
-                  'Normal Sugar',
+                  AppLocalizations.of(context)!.normalSugar,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
                 leading: Radio<String>(
@@ -97,7 +97,7 @@ class _BottomSheetContentState extends State<BottomSheetContent> {
               ),
               ListTile(
                 title: Text(
-                  'Less Sweet',
+                  AppLocalizations.of(context)!.lessSugar,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
                 leading: Radio<String>(
@@ -115,7 +115,7 @@ class _BottomSheetContentState extends State<BottomSheetContent> {
               ),
               ListTile(
                 title: Text(
-                  'More Sweet',
+                  AppLocalizations.of(context)!.moreSugar,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
                 leading: Radio<String>(
@@ -131,7 +131,7 @@ class _BottomSheetContentState extends State<BottomSheetContent> {
               ),
               ListTile(
                 title: Text(
-                  'No Sweet',
+                  AppLocalizations.of(context)!.noSugar,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
                 leading: Radio<String>(
@@ -211,7 +211,7 @@ class _BottomSheetContentState extends State<BottomSheetContent> {
                 backgroundColor: Color.fromARGB(255, 74, 140, 215),
               ),
               child: Text(
-                "Add to Cart",
+                AppLocalizations.of(context)!.addToCart,
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -261,7 +261,7 @@ class _BottomSheetContentState extends State<BottomSheetContent> {
         backgroundColor: Colors.black54.withOpacity(0.6),
         insetPadding: EdgeInsets.only(top: 20),
         title: Text(
-          "Successfully added to cart",
+          AppLocalizations.of(context)!.successfullyAddedToCart,
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 18,
@@ -275,7 +275,7 @@ class _BottomSheetContentState extends State<BottomSheetContent> {
               Navigator.pop(context);
             },
             child: Text(
-              "OK",
+              AppLocalizations.of(context)!.ok,
               style: TextStyle(
                 color: Colors.white,
               ),

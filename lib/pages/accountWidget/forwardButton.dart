@@ -14,8 +14,8 @@ class ForwardButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 57,
-        height: 57,
+        width: 60,
+        height: 60,
         decoration: BoxDecoration(
           color: Colors.grey.shade200,
           borderRadius: BorderRadius.circular(15),

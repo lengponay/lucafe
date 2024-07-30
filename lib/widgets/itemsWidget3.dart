@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, override_on_non_overriding_member
 
 import 'package:western/widgets/radio_switch_incre_decre.dart';
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
 import 'package:flutter/material.dart';
 // import 'package:western/widgets/navBar.dart';
 
@@ -20,7 +21,7 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
   @override
   String currentOption = options[0];
 
-  PersistentBottomSheetController customShowBottomSheet( 
+  PersistentBottomSheetController customShowBottomSheet(
       BuildContext context, int i) {
     return showBottomSheet(
       context: context,
@@ -51,9 +52,9 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
     "88",
     "ee",
     "kk",
-    "Iced Green Tea",
-    "Passion Tea",
-    "Oolong Tea",
+    "icedGreenTea",
+    "passionTea",
+    "olongTea",
     "Item 11",
     "Item 12",
     "Item 13",
@@ -71,9 +72,9 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
     "ds 88",
     "ds ee",
     " ds kk",
-    "Refreshing green tea served over ice",
-    "A vibrant, tropical blend of hibiscus and fruit flavors",
-    "Smooth oolong tea topped with a creamy milk foam",
+    "refreshingGreenTeaServedOverIce",
+    "aVibrantTropicalBlendOfHibiscusAndFruitFlavor",
+    "smoothOlongTeaToppedWithACreamyMilkFoam",
     "Description 11",
     "Description 12",
     "Description 13",
@@ -102,6 +103,46 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
 
   @override
   Widget build(BuildContext context) {
+    final AppLocalizations localizations = AppLocalizations.of(context)!;
+
+    final Map<String, String> localizedItemNames = {
+      "Item 1": localizations.age,
+      "Item 2": localizations.age,
+      "Item 3": localizations.age,
+      "Item 4": localizations.age,
+      "Item 5": localizations.age,
+      "Item 6": localizations.age,
+      "Item 7": localizations.age,
+      "icedGreenTea": localizations.icedGreenTea,
+      "passionTea": localizations.passionTea,
+      "olongTea": localizations.olongTea,
+      "Item 11": localizations.age,
+      "Item 12": localizations.age,
+      "Item 13": localizations.age,
+      "Item 14": localizations.age,
+    };
+    final Map<String, String> localizedDescription = {
+      "Description 1": localizations.age,
+      "Description 2": localizations.age,
+      "Description 3": localizations.age,
+      "Description 4": localizations.age,
+      "Description 5": localizations.age,
+      "Description 6": localizations.age,
+      "Description 7": localizations.age,
+      "ds 88": localizations.age,
+      "ds ee": localizations.age,
+      "ds kk": localizations.age,
+      "refreshingGreenTeaServedOverIce":
+          localizations.refreshingGreenTeaServedOverIce,
+      "aVibrantTropicalBlendOfHibiscusAndFruitFlavor":
+          localizations.aVibrantTropicalBlendOfHibiscusAndFruitFlavor,
+      "smoothOlongTeaToppedWithACreamyMilkFoam":
+          localizations.smoothOlongTeaToppedWithACreamyMilkFoam,
+      "Description 11": localizations.age,
+      "Description 12": localizations.age,
+      "Description 13": localizations.age,
+      "Description 14": localizations.age
+    };
     return GridView.count(
       crossAxisCount: 2,
       shrinkWrap: true,
@@ -145,7 +186,7 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
                   child: Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      itemNames[i],
+                      localizedItemNames[itemNames[i]]!,
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -157,7 +198,7 @@ class _IItemsWidget3State extends State<ItemsWidget3> {
                 Container(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    description[i],
+                    localizedDescription[description[i]]!,
                     style: TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w200,

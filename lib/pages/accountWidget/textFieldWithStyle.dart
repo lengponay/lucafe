@@ -17,23 +17,19 @@ class textFieldWithStyle extends StatelessWidget {
     return TextField(
       controller: _lastName,
       style: TextStyle(
-        color: Colors.grey[800],
+        color: Colors.white,
       ),
       decoration: InputDecoration(
-        filled: true,
-        fillColor: Color.fromARGB(199, 226, 238, 251),
         hintText: hintText,
         hintStyle: TextStyle(
-          color: Color.fromARGB(255, 127, 124, 124),
+          color: Colors.white,
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(
-            color: const Color.fromARGB(255, 103, 103, 103),
+            color: Colors.white,
           ),
         ),
         focusedBorder: UnderlineInputBorder( 
-          borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(
             color: Colors.white,
           ),
@@ -45,8 +41,7 @@ class textFieldWithStyle extends StatelessWidget {
           },
           icon: Icon(
             Icons.clear,
-            color: Colors.grey[600],
-            size: 22,
+            color: Colors.white,
           ),
         ),
       ),

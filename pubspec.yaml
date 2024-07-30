@@ -19,7 +19,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.4.0 <4.0.0"
+  sdk: ">=3.4.0-282.3.beta <4.0.0"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -30,24 +30,31 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  
 
+
+    
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
-  smooth_page_indicator: ^1.1.0
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.19.0
   flutter_slidable: ^3.1.0
-  carousel_slider: ^4.2.1
   google_fonts: ^6.2.1
   url_launcher: ^6.2.6
-  gradients: ^0.1.1+2
+  curved_navigation_bar: ^1.0.3
+  svg_icon: ^0.0.1
   ionicons: ^0.2.2
   provider: ^6.1.2
-  # your_package_name:
-  #   path: /Users/lengponay/development/CoffeeApp/western/lib/pages
+  gradients: ^0.1.1+2
+  smooth_page_indicator: ^1.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+    
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -55,7 +62,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
-  curved_navigation_bar: ^1.0.3
+  # curved_navigation_bar: ^1.0.3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -65,6 +72,7 @@ flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
+  generate: true
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
@@ -117,6 +125,7 @@ flutter:
     - lib/images/flag/china.png
     - lib/images/flag/eng.png
     - lib/images/flag/kh.png
+    - lib/images/flag/kr.jpg
 
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg

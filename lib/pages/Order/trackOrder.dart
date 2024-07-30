@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart';
+import "package:flutter_gen/gen_l10n/app_localization.dart";
 
 class TrackOrder extends StatelessWidget {
   const TrackOrder({super.key});
@@ -34,9 +37,9 @@ class TrackOrder extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 2),
-              const Center(
+              Center(
                 child: Text(
-                  'Order Number: #168168',
+                  AppLocalizations.of(context)!.orderCode,
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
@@ -45,9 +48,9 @@ class TrackOrder extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              const Center(
+              Center(
                 child: Text(
-                  'Estimate Preparing Time',
+                  AppLocalizations.of(context)!.estimatePreparingTime,
                   style: TextStyle(
                     color: Colors.white70,
                     fontSize: 18,
@@ -69,9 +72,9 @@ class TrackOrder extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 4),
-              const Center(
+              Center(
                 child: Text(
-                  '5 - 10 mins',
+                  AppLocalizations.of(context)!.fiveToTenMins,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 28,
@@ -90,13 +93,13 @@ class TrackOrder extends StatelessWidget {
                   const SizedBox(width: 20),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children:  [
                       Text(
-                        'Status',
+                        AppLocalizations.of(context)!.status,
                         style: TextStyle(color: Colors.white),
                       ),
                       Text(
-                        'LU Coffee',
+                        AppLocalizations.of(context)!.luCoffee,
                         style: TextStyle(
                           fontSize: 18, 
                           fontWeight: FontWeight.bold,
@@ -104,7 +107,7 @@ class TrackOrder extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '9.5 (100+ ratings)',
+                        AppLocalizations.of(context)!.ninePointFiveOneHundredRating,
                         style: TextStyle(color: Colors.white70),
                       ),
                     ],
@@ -117,37 +120,37 @@ class TrackOrder extends StatelessWidget {
                   children: [
                     _buildTimelineTile(
                       context,
-                      time: '8:00 AM',
-                      title: 'Order Placed',
-                      description: 'Your order #12345 was placed for delivery.',
+                      time: AppLocalizations.of(context)!.eightAM,
+                      title: AppLocalizations.of(context)!.orderPlaced,
+                      description: AppLocalizations.of(context)!.yourOrderCodeWasPlacedForDelivery,
                       isCompleted: true,
                     ),
                     _buildTimelineTile(
                       context,
-                      time: '8:15 AM',
-                      title: 'Pending',
-                      description: 'Your order is pending for confirmation.',
+                      time: AppLocalizations.of(context)!.eightFifteen,
+                      title: AppLocalizations.of(context)!.pending,
+                      description: AppLocalizations.of(context)!.yourOrderIsPendingForConfirmation,
                       isCompleted: true,
                     ),
                     _buildTimelineTile(
                       context,
-                      time: '8:30 AM',
-                      title: 'Confirmed',
-                      description: 'Your order is confirmed and will be ready soon.',
+                      time: AppLocalizations.of(context)!.eightThirty,
+                      title: AppLocalizations.of(context)!.confirmed,
+                      description: AppLocalizations.of(context)!.yourOrderIsConfirmedAndWillBeReadySoon,
                       isCompleted: true,
                     ),
                     _buildTimelineTile(
                       context,
-                      time: '8:45 AM',
-                      title: 'Processing',
-                      description: 'Your product is ready for picked up.',
+                      time: AppLocalizations.of(context)!.eightFortyFive,
+                      title: AppLocalizations.of(context)!.processing,
+                      description: AppLocalizations.of(context)!.yourProductIsReadyForPickedUp,
                       isCompleted: false,
                     ),
                     _buildTimelineTile(
                       context,
-                      time: '9:00 AM',
-                      title: 'Delivered',
-                      description: 'Product delivered to you and marked as delivered.',
+                      time: AppLocalizations.of(context)!.nineAM,
+                      title: AppLocalizations.of(context)!.delivered,
+                      description: AppLocalizations.of(context)!.productDeliveredToYouAndMarkedAsDelivered,
                       isCompleted: false,
                     ),
                   ],
@@ -170,7 +173,7 @@ class TrackOrder extends StatelessWidget {
                         backgroundColor: Colors.white,
                         foregroundColor: const Color.fromARGB(255, 51, 102, 190),
                       ),
-                      child: const Text('Confirm Pick Up'),
+                      child: Text(AppLocalizations.of(context)!.confirmPickUp),
                     ),
                   ),
                 ),
@@ -261,7 +264,7 @@ class OrderServedMessage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: AlertDialog(
-        title: const Text("Order Served"),
+        title: Text(AppLocalizations.of(context)!.orderServed),
         content: Container(
           width: MediaQuery.of(context).size.width * 0.8,
           height: MediaQuery.of(context).size.height * 0.52,
@@ -275,8 +278,8 @@ class OrderServedMessage extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
               const SizedBox(height: 5),
-              const Text(
-                "Your order has already been served. Thank you :)",
+              Text(
+                AppLocalizations.of(context)!.yourOrderHasAlreadyBeenServedThankYou,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
@@ -289,8 +292,8 @@ class OrderServedMessage extends StatelessWidget {
         ),
         actions: [
           TextButton(
-            child: const Text(
-              "Back to Home",
+            child: Text(
+              AppLocalizations.of(context)!.backToHome,
               style: TextStyle(
                 fontSize: 17,
                 fontWeight: FontWeight.w400,

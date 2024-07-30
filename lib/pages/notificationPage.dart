@@ -1,9 +1,7 @@
-// 
 
-// ignore_for_file: prefer_const_constructors, unused_local_variable, avoid_unnecessary_containers
-
-import 'package:western/pages/notificationDetailPage.dart';
 import 'package:flutter/material.dart';
+
+import 'notificationDetailPage.dart';
 
 class Notificationpage extends StatelessWidget {
   const Notificationpage({Key? key}) : super(key: key);

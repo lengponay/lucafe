@@ -2,16 +2,13 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:flutter/material.dart';
-
+import 'package:western/pages/account/edit_profile.dart';
 import '../accountWidget/forwardButton.dart';
 import '../accountWidget/settingItem.dart';
 import '../accountWidget/setting_switch.dart';
-import 'edit_profile.dart';
-// import 'package:western/account/edit_profile.dart';
-// import 'package:western/widgets/forwardButton.dart';
-// import 'package:western/widgets/settingItem.dart';
-// import 'package:western/widgets/setting_switch.dart';
-// import 'languages.dart';
+
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
+
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -22,10 +19,10 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
   bool isDarkMode = false;
-  String userInputFname = 'Olivia';
-  String userInputLname = 'Alie';
+  String userInputFname = 'Manika';
+  String userInputLname = 'Rous';
   String userInputAge = '26';
-  String userInputEmail = 'oliviaalie45@gmail.com';
+  String userInputEmail = 'manikaRous@gmail.com';
   String userInputContact = '086928053';
 
   @override
@@ -33,20 +30,20 @@ class _ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors:[Color.fromARGB(255, 74, 140, 215), Color.fromARGB(255, 217, 222, 222)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
+            gradient: LinearGradient(
+              colors:  [Color.fromARGB(255, 74, 140, 215), Color.fromARGB(255, 217, 222, 222)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
         ),
-        child: SafeArea(
+       
           child: Padding(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.only(top : 70, right : 30, left : 30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     InkWell(
                       onTap: () {
@@ -58,25 +55,32 @@ class _ProfilePageState extends State<ProfilePage> {
                         size: 32,
                       ),
                     ),
-
-                    ///// for profile text at the top (or app bar)
-                    SizedBox(width: 110),
                     Text(
-                      "Profile",
-                      style: GoogleFonts.assistant(
+                      AppLocalizations.of(context)!.profile,
+                      style: GoogleFonts.nunito(
                         textStyle: TextStyle(
-                          fontSize: 36,
+                          fontSize: 25,
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                         ),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, "/notification");
+                      },
+                      child: Icon(
+                        Icons.notifications,
+                        color: Colors.white,
+                        size: 32,
                       ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 30),
                 Text(
-                  "Account",
-                  style: GoogleFonts.assistant(
+                  AppLocalizations.of(context)!.account,
+                  style: GoogleFonts.nunito(
                     textStyle: TextStyle(
                       fontSize: 24,
                       color: Colors.white,
@@ -104,7 +108,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         children: [
                           Text(
                             ("$userInputFname $userInputLname"),
-                            style: GoogleFonts.assistant(
+                            style: GoogleFonts.nunito(
                               textStyle: TextStyle(
                                 fontSize: 24,
                                 fontWeight: FontWeight.w500,
@@ -114,7 +118,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                           const SizedBox(height: 10),
                           Text(
-                            "Edit Profile",
+                            AppLocalizations.of(context)!.editProfile,
                             style: TextStyle(
                               fontSize: 14,
                               color: Colors.white,
@@ -138,8 +142,8 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 const SizedBox(height: 40),
                 Text(
-                  "Setting",
-                  style: GoogleFonts.assistant(
+                  AppLocalizations.of(context)!.setting,
+                  style: GoogleFonts.nunito(
                     textStyle: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.w500,
@@ -149,7 +153,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 const SizedBox(height: 20),
                 SettingItem(
-                  title: "Language",
+                  title: AppLocalizations.of(context)!.language,
                   bgColor: Colors.orange.shade100,
                   iconColor: Colors.orange,
                   icon: Ionicons.language,
@@ -160,21 +164,11 @@ class _ProfilePageState extends State<ProfilePage> {
                   },
                 ),
                 const SizedBox(height: 20),
-                SettingItem(
-                  title: "Notifications",
-                  bgColor: Colors.blue.shade100,
-                  iconColor: Colors.blue,
-                  icon: Ionicons.notifications,
-                  onTap: () {
-                    Navigator.pushNamed(context, "/notification");
-                  },
-                ),
-                const SizedBox(height: 20),
                 SettingSwitch(
-                  title: "Dark Mode",
-                  bgColor: Colors.purple.shade100,
-                  iconColor: Colors.purple,
-                  icon: Ionicons.invert_mode_outline,
+                  title: AppLocalizations.of(context)!.notifications,
+                  bgColor: Colors.green.shade100,
+                  iconColor: Colors.green,
+                  icon: Ionicons.notifications,
                   value: isDarkMode,
                   onTap: (value) {
                     setState(() {
@@ -184,9 +178,9 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 const SizedBox(height: 20),
                 SettingItem(
-                  title: "Change Password",
-                  bgColor: Colors.red.shade100,
-                  iconColor: Colors.red,
+                  title: AppLocalizations.of(context)!.password,
+                  bgColor: Colors.blue.shade100,
+                  iconColor: Colors.blue,
                   icon: Ionicons.key,
                   onTap: () {
                     Navigator.pushNamed(context, "/changePw");
@@ -194,69 +188,76 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 const SizedBox(height: 20),
                 SettingItem(
-                  title: "Log Out",
+                  title: AppLocalizations.of(context)!.deleteAccount,
+                  bgColor: Colors.red.shade100,
+                  iconColor: Colors.red,
+                  icon: Ionicons.trash_bin,
+                  onTap: () {
+                    Navigator.pushNamed(context, "/changePw");
+                  },
+                ),
+                const SizedBox(height: 20),
+                SettingItem(
+                  title: AppLocalizations.of(context)!.logOut,
                   bgColor: Colors.grey.shade100,
                   iconColor: Colors.grey,
                   icon: Ionicons.log_out,
                   onTap: () {
                     showDialog(
-                      context: context,
-                      builder: (context) {
-                        return AlertDialog(
-                          backgroundColor:
-                              Color.fromARGB(162, 197, 219, 223),
-                          // insetPadding: EdgeInsets.only(top: 20),
-                          title: Text(
-                            "Log Out",
-                            // textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                          content: Text(
-                            "Are you sure to log out?",
-                            // textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.white,
-                            ),
-                          ),
-                          actions: [
-                            MaterialButton(
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
-                              child: Text(
-                                "Cancel",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                ),
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            backgroundColor: Color.fromARGB(255, 34, 113, 178),
+                            // insetPadding: EdgeInsets.only(top: 20),
+                            title: Text(
+                              AppLocalizations.of(context)!.logOut,
+                              // textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
                               ),
                             ),
-                            MaterialButton(
-                              onPressed: () {
-                                Navigator.pushNamed(context, "/");
-                              },
-                              child: Text(
-                                "Log Out",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                ),
+                            content: Text(
+                              AppLocalizations.of(context)!.areYouSureToLogOut,
+                              // textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
                               ),
                             ),
-                          ],
-                        );
-                      },
-                    );
+                            actions: [
+                              MaterialButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text(
+                                  AppLocalizations.of(context)!.cancel,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              MaterialButton(
+                                onPressed: () {
+                                  Navigator.pushNamed(context, "/");
+                                },
+                                child: Text(
+                                  AppLocalizations.of(context)!.logOut,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          );
+                        });
                   },
                 ),
               ],
             ),
           ),
         ),
-      ),
-    );
+      );
+    
   }
 }

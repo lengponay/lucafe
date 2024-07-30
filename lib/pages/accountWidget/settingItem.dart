@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+// import 'package:ionicons/ionicons.dart';
+
 
 import 'forwardButton.dart';
-// import 'package:ionicons/ionicons.dart';
-// import 'package:western/widgets/forwardButton.dart';
 
 
 class SettingItem extends StatelessWidget {
@@ -46,7 +46,7 @@ class SettingItem extends StatelessWidget {
           Text(
             title,
             style: const TextStyle(
-              fontSize: 18,
+              fontSize: 16,
               color: Colors.white,
               fontWeight: FontWeight.w500,
             ),

@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:western/widgets/itemsWidget.dart';
@@ -5,6 +7,8 @@ import 'package:western/widgets/itemsWidget2.dart';
 import 'package:western/widgets/itemsWidget3.dart';
 import 'package:western/widgets/itemsWidget4.dart';
 import 'package:western/widgets/itemsWidget5.dart';
+import 'package:flutter_gen/gen_l10n/app_localization.dart';
+
 // import 'package:gradients/gradients.dart';
 
 class MenuPage extends StatelessWidget {
@@ -18,7 +22,10 @@ class MenuPage extends StatelessWidget {
         body: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [Color.fromARGB(255, 74, 140, 215), Color.fromARGB(255, 217, 222, 222)],
+              colors: [
+                Color.fromARGB(255, 74, 140, 215),
+                Color.fromARGB(255, 217, 222, 222)
+              ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
@@ -45,7 +52,7 @@ class MenuPage extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          "Menu",
+                          AppLocalizations.of(context)!.menu,////////////////// menu
                           style: GoogleFonts.assistant(
                             fontSize: 28,
                             color: Colors.white,
@@ -77,7 +84,7 @@ class MenuPage extends StatelessWidget {
                         ),
                         SizedBox(width: 10),
                         Text(
-                          "Open from 7AM Until 5PM",
+                          AppLocalizations.of(context)!.openFromSevenAMtoFivePM,
                           style: GoogleFonts.assistant(
                             fontSize: 19,
                             color: Colors.white,
@@ -99,7 +106,7 @@ class MenuPage extends StatelessWidget {
                         ),
                         SizedBox(width: 10),
                         Text(
-                          "Self-PickUp at the LU Coffee",
+                          AppLocalizations.of(context)!.selfPickUpAtTheLUCoffee,
                           style: GoogleFonts.assistant(
                             fontSize: 18,
                             color: Colors.white,
@@ -121,10 +128,10 @@ class MenuPage extends StatelessWidget {
                         ),
                         SizedBox(width: 10),
                         Text(
-                          "9.5    100+ ratings",
+                          AppLocalizations.of(context)!.rating,//// star rating
                           style: GoogleFonts.assistant(
                             fontSize: 18,
-                            color: Color.fromARGB(255, 29, 15, 15),
+                            color: Colors.white,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
@@ -144,11 +151,11 @@ class MenuPage extends StatelessWidget {
                     ),
                     labelPadding: EdgeInsets.symmetric(horizontal: 20),
                     tabs: [
-                      Tab(text: "Cold Coffee"),
-                      Tab(text: "Hot Coffee"),
-                      Tab(text: "Tea"),
-                      Tab(text: "Milk Tea"),
-                      Tab(text: "Soft Drinks"),
+                      Tab(text: AppLocalizations.of(context)!.coldCoffee),
+                      Tab(text: AppLocalizations.of(context)!.hotCoffee),
+                      Tab(text: AppLocalizations.of(context)!.tea),
+                      Tab(text: AppLocalizations.of(context)!.milkTea),
+                      Tab(text: AppLocalizations.of(context)!.softDrink),
                     ],
                   ),
                   Flexible(
