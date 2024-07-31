@@ -121,7 +121,7 @@ class _LanguagesState extends State<Languages> {
                 },
                 child: chooseLanguage(
                   '',
-                  language: "한국인",
+                  language: "한국어",
                   flag: "lib/images/flag/kr.jpg",
                   isChecked: _isCheckedKorean,
                 ),
